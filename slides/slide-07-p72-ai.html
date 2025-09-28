@@ -1,0 +1,154 @@
+<!-- Slide 7: P72 AI Initiative -->
+<div class="slide" id="slide-7" data-slide-number="7">
+    <div class="slide-header">
+        <h1 class="slide-title" style="font-size: clamp(1.25rem, 2.5vh, 1.75rem);">// P72 AI INITIATIVE</h1>
+        <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
+    </div>
+    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: flex-start; overflow-y: auto; padding: 0.5vh 2vw 1vh 2vw; gap: min(1vh, 0.75rem);">
+        <!-- Origin Section -->
+        <div style="border: 1px solid var(--border-color); border-radius: 8px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05); flex-shrink: 0;">
+            <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: var(--text-secondary); text-transform: uppercase; margin-bottom: min(0.5vh, 0.25rem);">ORIGIN</div>
+            <p style="margin: 0; font-size: clamp(0.75rem, 1.5vh, 0.95rem); line-height: 1.45;">
+                Analysts were drowning in note-taking and manual synthesis across calls, filings, and transcripts. I proposed and led an AI initiative to automate the busywork so researchers could focus on judgment — starting in Healthcare, then scaling division-wide. <span style="background: #22C55E; color: white; padding: min(0.25vh, 2px) min(0.5vh, 4px); border-radius: 4px; font-weight: 700;">Impact: cycle time ↓ ~40%</span>
+            </p>
+        </div>
+
+        <!-- Main Two-Column Grid -->
+        <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: min(1.5vh, 1rem); flex-grow: 1;">
+            <!-- Left: Research AI Platform -->
+            <section style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08); overflow-y: auto;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: min(1vh, 0.5rem);">
+                    <h2 style="margin: 0; font-size: clamp(0.9rem, 1.8vh, 1.1rem); color: var(--accent-primary);">Point72 Research AI Platform</h2>
+                    <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: var(--text-secondary);">Jan 2024 → present</span>
+                </div>
+
+                <!-- Challenge / What I Built / Impact -->
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: min(1vh, 0.5rem); margin-bottom: min(1vh, 0.5rem);">
+                    <div style="background: #F7F9FC; border: 1px solid var(--border-color); border-radius: 8px; padding: min(1vh, 0.75rem);">
+                        <div style="font-weight: 600; margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #22324D;">Challenge</div>
+                        <ul style="margin: 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4;">
+                            <li>Manual aggregation across expert calls, earnings transcripts, and SEC filings</li>
+                            <li>Bottlenecks from draft formatting + QA</li>
+                        </ul>
+                    </div>
+                    <div style="background: #F7F9FC; border: 1px solid var(--border-color); border-radius: 8px; padding: min(1vh, 0.75rem);">
+                        <div style="font-weight: 600; margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #22324D;">What I Built</div>
+                        <ul style="margin: 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4;">
+                            <li>LangChain-based synthesis tool routing to frontier LLMs</li>
+                            <li>Ingest of call notes, earnings calls, and SEC (10-K/10-Q/8-K/proxies)</li>
+                            <li>Inline citations, template-constrained "house-style" drafts</li>
+                            <li>Automated packaging & distribution to PMs</li>
+                        </ul>
+                    </div>
+                    <div style="background: #F7F9FC; border: 1px solid var(--border-color); border-radius: 8px; padding: min(1vh, 0.75rem);">
+                        <div style="font-weight: 600; margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #22324D;">Impact</div>
+                        <ul style="margin: 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4;">
+                            <li><span style="background: #22C55E; color: white; padding: 2px 6px; border-radius: 4px; font-weight: 700;">Analysis time ↓ ~40%</span></li>
+                            <li>Scaled from 16 Healthcare PMs → full US research division</li>
+                            <li>Faster PM feedback loop; consistent tone/structure</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Workflow & System Pipeline -->
+                <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: min(1vh, 0.5rem);">
+                    <!-- Before → After Workflow -->
+                    <div style="border: 1px dashed var(--border-color); border-radius: 8px; padding: min(1vh, 0.75rem); background: #FCFDFE;">
+                        <div style="font-weight: 600; margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #22324D;">Before → After (workflow)</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: min(0.5vh, 0.25rem); align-items: center; font-size: clamp(0.55rem, 1.1vh, 0.7rem);">
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">PM Brief</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">Expert Calls</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: #22C55E; color: white;">LLM Summaries</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: #22C55E; color: white;">House-Style Draft</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">Analyst Edit</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">Publish</span>
+                        </div>
+                    </div>
+
+                    <!-- System Pipeline -->
+                    <div style="border: 1px dashed var(--border-color); border-radius: 8px; padding: min(1vh, 0.75rem); background: #FCFDFE;">
+                        <div style="font-weight: 600; margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #22324D;">System pipeline</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: min(0.5vh, 0.25rem); align-items: center; font-size: clamp(0.55rem, 1.1vh, 0.7rem); justify-content: center;">
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; border: 1px solid var(--border-color);">Data (SQL)</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; border: 1px solid var(--border-color);">LLM APIs</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; border: 1px solid var(--border-color);">Templates</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; border: 1px solid var(--border-color);">QA + Citations</span>
+                            <span style="color: var(--text-secondary);">→</span>
+                            <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; border: 1px solid var(--border-color);">Report</span>
+                        </div>
+                        <ul style="margin: min(0.75vh, 0.5rem) 0 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: var(--text-secondary);">
+                            <li>Metadata/lineage tracking; human-in-the-loop reviews</li>
+                            <li>Fallback to manual when confidence < threshold</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: GridMate -->
+            <aside style="display: flex; flex-direction: column; gap: min(1vh, 0.5rem);">
+                <!-- GridMate Section -->
+                <div style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                    <h3 style="margin: 0 0 min(0.75vh, 0.5rem); font-size: clamp(0.85rem, 1.7vh, 1rem); color: var(--accent-primary);">GridMate (Natural-Language Excel)</h3>
+                    <p style="margin: 0 0 min(1vh, 0.5rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.45;">
+                        A companion effort: a lightweight AI assistant for Excel modeling — formula generation, debugging, and model scaffolding via chat.
+                    </p>
+                    <ul style="margin: 0 0 min(1vh, 0.5rem); padding-left: min(1.5vh, 1rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4;">
+                        <li>Office.js add-in + streaming LLM pipeline</li>
+                        <li>Change previews and audit trail for compliance</li>
+                    </ul>
+                    <div style="margin-top: min(0.75vh, 0.5rem); font-size: clamp(0.7rem, 1.4vh, 0.85rem);">
+                        <span style="background: #22C55E; color: white; padding: min(0.35vh, 0.25rem) min(0.75vh, 0.5rem); border-radius: 999px; font-weight: 700;">Modeling time ↓ ~70%</span>
+                    </div>
+                </div>
+
+                <!-- Additional Tech Details -->
+                <div style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                    <h3 style="margin: 0 0 min(0.75vh, 0.5rem); font-size: clamp(0.85rem, 1.7vh, 1rem); color: var(--accent-primary);">Tech Stack & Governance</h3>
+                    <div style="margin-bottom: min(1vh, 0.5rem);">
+                        <div style="font-weight: 600; font-size: clamp(0.65rem, 1.3vh, 0.8rem); margin-bottom: min(0.25vh, 2px);">Technologies</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: min(0.5vh, 0.25rem);">
+                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); background: var(--bg-tertiary); padding: min(0.25vh, 2px) min(0.5vh, 4px); border-radius: 4px;">LangChain</span>
+                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); background: var(--bg-tertiary); padding: min(0.25vh, 2px) min(0.5vh, 4px); border-radius: 4px;">SQL</span>
+                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); background: var(--bg-tertiary); padding: min(0.25vh, 2px) min(0.5vh, 4px); border-radius: 4px;">Office.js</span>
+                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); background: var(--bg-tertiary); padding: min(0.25vh, 2px) min(0.5vh, 4px); border-radius: 4px;">LLM APIs</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-weight: 600; font-size: clamp(0.65rem, 1.3vh, 0.8rem); margin-bottom: min(0.25vh, 2px);">Risk Controls</div>
+                        <ul style="margin: 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3;">
+                            <li>Confidentiality controls & prompt hygiene</li>
+                            <li>Evaluation sets for accuracy/style</li>
+                            <li>Human-in-the-loop review gates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Scaling Success -->
+                <div style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1vh, 0.75rem); background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+                    <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); font-weight: 600; color: #1b5e20; margin-bottom: min(0.25vh, 2px);">Scaling Success</div>
+                    <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3;">
+                        Started with 16 Healthcare PMs → Expanded to full US research division → Became template for other automation initiatives
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Apex Relevance Footer -->
+        <div style="border-radius: 10px; padding: min(1vh, 0.75rem) min(1.5vh, 1rem); background: linear-gradient(135deg, var(--accent-primary), #5a8bb7); color: white; text-align: center; flex-shrink: 0;">
+            <strong style="font-size: clamp(0.75rem, 1.5vh, 0.95rem);">Relevance to Apex:</strong>
+            <span style="font-size: clamp(0.7rem, 1.4vh, 0.85rem);">Bring the same "automate → standardize → govern" pattern to spacecraft supply-chain ops — faster report cycles, traceable data lineage, and consistent outputs across teams.</span>
+        </div>
+    </div>
+    <div class="slide-footer">
+        <span class="footer-left"></span>
+        <span class="footer-right">PAGE 7 OF 10</span>
+    </div>
+</div>

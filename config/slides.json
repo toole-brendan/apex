@@ -27,40 +27,40 @@
     {
       "id": "slide-3",
       "number": "03",
-      "file": "slides/slide-03-gcss-army.html",
-      "title": "GCSS-ARMY ERP SYSTEM",
-      "footerLeft": "PROJECT 1",
+      "file": "slides/slide-03-army-roles.html",
+      "title": "US ARMY INFANTRY ROLES",
+      "footerLeft": "MILITARY EXPERIENCE",
       "footerRight": "PAGE 3 OF 10"
     },
     {
       "id": "slide-4",
       "number": "04",
-      "file": "slides/slide-04-deployment.html",
-      "title": "DEPLOYMENT READINESS",
-      "footerLeft": "PROJECT 1 - IMPACT",
+      "file": "slides/slide-04-gcss-army.html",
+      "title": "GCSS-ARMY ERP SYSTEM",
+      "footerLeft": "PROJECT 1",
       "footerRight": "PAGE 4 OF 10"
     },
     {
       "id": "slide-5",
       "number": "05",
-      "file": "slides/slide-05-problem-solving.html",
-      "title": "CRITICAL PROBLEM SOLVING",
-      "footerLeft": "PROJECT 1 - TECHNICAL",
+      "file": "slides/slide-05-atlantic-resolve.html",
+      "title": "DEPLOYMENT READINESS - ATLANTIC RESOLVE",
+      "footerLeft": "PROJECT 1 - IMPACT",
       "footerRight": "PAGE 5 OF 10"
     },
     {
       "id": "slide-6",
       "number": "06",
-      "file": "slides/slide-06-healthcare.html",
-      "title": "HEALTHCARE SUPPLY CHAIN ANALYTICS",
+      "file": "slides/slide-06-point72.html",
+      "title": "POINT72 SUPPLY CHAIN ANALYST",
       "footerLeft": "PROJECT 2",
       "footerRight": "PAGE 6 OF 10"
     },
     {
       "id": "slide-7",
       "number": "07",
-      "file": "slides/slide-07-ai-automation.html",
-      "title": "AI AUTOMATION INITIATIVE",
+      "file": "slides/slide-07-p72-ai.html",
+      "title": "P72 AI INITIATIVE",
       "footerLeft": "PROJECT 2 - IMPACT",
       "footerRight": "PAGE 7 OF 10"
     },
