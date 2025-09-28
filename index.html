@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brendan T. Toole - Apex Panel Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation-container" id="presentation-container">
+        <!-- Slides will be dynamically loaded here -->
+        <div class="loading-indicator" id="loading-indicator">
+            <div class="loading-text">Loading presentation...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" id="prev-btn">←</button>
+        <span class="nav-indicator">
+            <span id="current-slide">1</span> / <span id="total-slides">11</span>
+        </span>
+        <button class="nav-btn" id="next-btn">→</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

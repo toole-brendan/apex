@@ -1,0 +1,92 @@
+{
+  "slides": [
+    {
+      "id": "slide-0",
+      "number": "00",
+      "file": "slides/slide-00-title.html",
+      "title": "APEX PANEL PRESENTATION",
+      "footerLeft": "APEX.SPACE",
+      "footerRight": "LOS ANGELES, CA"
+    },
+    {
+      "id": "slide-1",
+      "number": "01",
+      "file": "slides/slide-01-journey.html",
+      "title": "PROFESSIONAL JOURNEY",
+      "footerLeft": "BACKGROUND",
+      "footerRight": "PAGE 1 OF 10"
+    },
+    {
+      "id": "slide-2",
+      "number": "02",
+      "file": "slides/slide-02-why-apex.html",
+      "title": "WHY APEX",
+      "footerLeft": "MOTIVATION",
+      "footerRight": "PAGE 2 OF 10"
+    },
+    {
+      "id": "slide-3",
+      "number": "03",
+      "file": "slides/slide-03-gcss-army.html",
+      "title": "GCSS-ARMY ERP SYSTEM",
+      "footerLeft": "PROJECT 1",
+      "footerRight": "PAGE 3 OF 10"
+    },
+    {
+      "id": "slide-4",
+      "number": "04",
+      "file": "slides/slide-04-deployment.html",
+      "title": "DEPLOYMENT READINESS",
+      "footerLeft": "PROJECT 1 - IMPACT",
+      "footerRight": "PAGE 4 OF 10"
+    },
+    {
+      "id": "slide-5",
+      "number": "05",
+      "file": "slides/slide-05-problem-solving.html",
+      "title": "CRITICAL PROBLEM SOLVING",
+      "footerLeft": "PROJECT 1 - TECHNICAL",
+      "footerRight": "PAGE 5 OF 10"
+    },
+    {
+      "id": "slide-6",
+      "number": "06",
+      "file": "slides/slide-06-healthcare.html",
+      "title": "HEALTHCARE SUPPLY CHAIN ANALYTICS",
+      "footerLeft": "PROJECT 2",
+      "footerRight": "PAGE 6 OF 10"
+    },
+    {
+      "id": "slide-7",
+      "number": "07",
+      "file": "slides/slide-07-ai-automation.html",
+      "title": "AI AUTOMATION INITIATIVE",
+      "footerLeft": "PROJECT 2 - IMPACT",
+      "footerRight": "PAGE 7 OF 10"
+    },
+    {
+      "id": "slide-8",
+      "number": "08",
+      "file": "slides/slide-08-handreceipt.html",
+      "title": "HANDRECEIPT ERP SYSTEM",
+      "footerLeft": "PROJECT 3",
+      "footerRight": "PAGE 8 OF 10"
+    },
+    {
+      "id": "slide-9",
+      "number": "09",
+      "file": "slides/slide-09-ideal-candidate.html",
+      "title": "IDEAL CANDIDATE",
+      "footerLeft": "VALUE PROPOSITION",
+      "footerRight": "PAGE 9 OF 10"
+    },
+    {
+      "id": "slide-10",
+      "number": "10",
+      "file": "slides/slide-10-thank-you.html",
+      "title": "THANK YOU",
+      "footerLeft": "APEX.SPACE",
+      "footerRight": "END OF PRESENTATION"
+    }
+  ]
+}
