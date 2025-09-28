@@ -731,10 +731,10 @@ html, body {
 
 /* Timeline logo styles */
 .timeline-logo {
-  width: 32px;
-  height: 32px;
+  width: 48px;    /* Increased from 32px for better visibility */
+  height: 48px;   /* Increased from 32px for better visibility */
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;  /* Increased spacing */
   opacity: 0.9;
 }
 
@@ -1457,9 +1457,9 @@ body.printing .navigation {
   }
 
   .timeline-logo {
-    width: 24px !important;
-    height: 24px !important;
-    margin-bottom: 0.25rem !important;
+    width: 36px !important;    /* Increased from 24px for better print visibility */
+    height: 36px !important;   /* Increased from 24px for better print visibility */
+    margin-bottom: 0.5rem !important;  /* Increased spacing for print */
   }
 
   .competency-bar {
