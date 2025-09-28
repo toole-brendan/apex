@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "description": "Brendan T. Toole - Apex Panel Presentation",
   "scripts": {
-    "dev": "(lsof -ti:8000 | xargs kill -9 2>/dev/null || true) && python3 -m http.server 8000 & SERVER_PID=$! && sleep 1 && open http://localhost:8000 && trap 'kill $SERVER_PID 2>/dev/null' EXIT && wait $SERVER_PID"
+    "dev": "(lsof -ti:8000 | xargs kill -9 2>/dev/null || true) && python3 -m http.server 8000 & SERVER_PID=$! && sleep 1 && open http://localhost:8000 && trap 'kill $SERVER_PID 2>/dev/null' EXIT && wait $SERVER_PID",
+    "pdf": "node generate-pdf.js",
+    "install-pdf": "npm install puppeteer"
   },
   "author": "Brendan T. Toole",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "puppeteer": "^24.22.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pdf-lib": "^1.17.1"
+  }
 }

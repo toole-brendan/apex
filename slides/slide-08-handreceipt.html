@@ -1,49 +1,112 @@
 <!-- Slide 8: HandReceipt System -->
 <div class="slide" id="slide-8" data-slide-number="8">
     <div class="slide-header">
-        <h1 class="slide-title">HANDRECEIPT ERP SYSTEM</h1>
-        <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner">
+        <h1 class="slide-title" style="font-size: clamp(1.25rem, 2.5vh, 1.75rem);">// HANDRECEIPT ERP SYSTEM</h1>
+        <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
     </div>
-    <div class="slide-content">
-        <div class="content-section full-width">
-            <div class="section-title">CUSTOM ERP DEVELOPMENT FROM SCRATCH</div>
-            <div class="split-container">
-                <div class="list-section">
-                    <div class="list-title">PROBLEM STATEMENT</div>
-                    <div class="problem-text">GCSS-Army couldn't track sub-hand receipts to individual soldiers. Equipment losses averaging $50K per quarter with no accountability trail.</div>
-                </div>
-                <div class="list-section">
-                    <div class="list-title">TECHNICAL IMPLEMENTATION</div>
-                    <div class="code-block">// Core Features
-- OCR digitization of DA Form 2062
-- Immutable audit trail using cryptographic ledger
-- Multi-platform (web + mobile)
-- Offline-first architecture
-- Real-time sync with GCSS-Army</div>
+    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: space-evenly; overflow: hidden; padding: 1vh 2vw; gap: min(2vh, 1.25rem);">
+        <!-- Overview Section -->
+        <div class="content-section" style="margin: 0; flex-shrink: 0;">
+            <div class="section-title" style="font-size: clamp(1rem, 2.2vh, 1.25rem); margin-bottom: min(1vh, 0.75rem);">CUSTOM ERP DEVELOPMENT FROM SCRATCH</div>
+            <div style="background: rgba(74, 123, 167, 0.08); padding: min(1.5vh, 1rem); border-radius: 8px; border-left: 4px solid var(--accent-primary);">
+                <p style="font-size: clamp(0.8rem, 1.6vh, 1rem); color: var(--text-primary); line-height: 1.4; margin: 0;">
+                    Identified critical gap in GCSS-Army's capability and built a <strong style="color: var(--accent-primary);">full-stack ERP solution</strong> from scratch.
+                    This system bridges the accountability gap between company-level property books and individual soldier responsibility,
+                    solving a $200K+ annual loss problem across the Army.
+                </p>
+            </div>
+        </div>
+
+        <!-- Problem and Solution Grid -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: min(2vh, 1.5rem); flex-shrink: 0;">
+            <!-- Problem Statement -->
+            <div style="background: #fff5f5; border: 2px solid #e74c3c; border-radius: 8px; padding: min(2vh, 1.25rem);">
+                <h3 style="color: #e74c3c; font-size: clamp(0.9rem, 1.8vh, 1.1rem); margin-bottom: min(1vh, 0.75rem); font-weight: 600;">🚨 PROBLEM STATEMENT</h3>
+                <div style="font-size: clamp(0.75rem, 1.5vh, 0.95rem); color: var(--text-secondary); line-height: 1.4;">
+                    <p style="margin: 0 0 min(1vh, 0.75rem) 0;">
+                        <strong style="color: var(--text-primary);">System Gap:</strong> GCSS-Army couldn't track sub-hand receipts to individual soldiers
+                    </p>
+                    <p style="margin: 0 0 min(1vh, 0.75rem) 0;">
+                        <strong style="color: var(--text-primary);">Financial Impact:</strong> Equipment losses averaging $50K per quarter
+                    </p>
+                    <p style="margin: 0;">
+                        <strong style="color: var(--text-primary);">Root Cause:</strong> No digital accountability trail below company level
+                    </p>
                 </div>
             </div>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-title">LOSS REDUCTION</div>
-                    <div class="metric-value">85%</div>
-                    <div class="metric-desc">Equipment losses decreased</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-title">TIME SAVINGS</div>
-                    <div class="metric-value">70%</div>
-                    <div class="metric-desc">Inventory process</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-title">ADOPTION</div>
-                    <div class="metric-value">3</div>
-                    <div class="metric-desc">Brigades implemented</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-title">ROI</div>
-                    <div class="metric-value">$200K</div>
-                    <div class="metric-desc">Annual savings</div>
+
+            <!-- Technical Implementation -->
+            <div style="background: #e8f8f5; border: 2px solid #27ae60; border-radius: 8px; padding: min(2vh, 1.25rem);">
+                <h3 style="color: #27ae60; font-size: clamp(0.9rem, 1.8vh, 1.1rem); margin-bottom: min(1vh, 0.75rem); font-weight: 600;">⚡ TECHNICAL SOLUTION</h3>
+                <div style="background: var(--bg-secondary); padding: min(1vh, 0.75rem); border-radius: 4px; font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: var(--text-primary); line-height: 1.4;">
+                    <div style="color: var(--accent-primary); margin-bottom: min(0.5vh, 0.25rem);">// Core Features</div>
+                    <div>• OCR digitization of DA Form 2062</div>
+                    <div>• Cryptographic audit trail (immutable)</div>
+                    <div>• Multi-platform (web + mobile)</div>
+                    <div>• Offline-first architecture</div>
+                    <div>• Real-time GCSS-Army sync</div>
+                    <div>• QR code asset tracking</div>
                 </div>
             </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: min(1.5vh, 1rem); flex-shrink: 0;">
+            <div style="background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 8px; padding: min(2vh, 1.25rem); text-align: center; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #27ae60, #2ecc71);"></div>
+                <div style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: min(0.75vh, 0.5rem);">Loss Reduction</div>
+                <div style="font-size: clamp(2rem, 4vh, 2.5rem); font-weight: bold; color: #27ae60; margin: min(0.5vh, 0.25rem) 0;">85%</div>
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary);">Equipment losses<br>decreased</div>
+            </div>
+            <div style="background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 8px; padding: min(2vh, 1.25rem); text-align: center; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent-primary), #5a8bb7);"></div>
+                <div style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: min(0.75vh, 0.5rem);">Time Savings</div>
+                <div style="font-size: clamp(2rem, 4vh, 2.5rem); font-weight: bold; color: var(--accent-primary); margin: min(0.5vh, 0.25rem) 0;">70%</div>
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary);">Inventory process<br>acceleration</div>
+            </div>
+            <div style="background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 8px; padding: min(2vh, 1.25rem); text-align: center; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent-primary), #5a8bb7);"></div>
+                <div style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: min(0.75vh, 0.5rem);">Adoption</div>
+                <div style="font-size: clamp(2rem, 4vh, 2.5rem); font-weight: bold; color: var(--accent-primary); margin: min(0.5vh, 0.25rem) 0;">3</div>
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary);">Brigades<br>implemented</div>
+            </div>
+            <div style="background: var(--bg-card); border: 2px solid var(--border-color); border-radius: 8px; padding: min(2vh, 1.25rem); text-align: center; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #f39c12, #f1c40f);"></div>
+                <div style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: var(--text-secondary); text-transform: uppercase; font-weight: 600; margin-bottom: min(0.75vh, 0.5rem);">ROI</div>
+                <div style="font-size: clamp(2rem, 4vh, 2.5rem); font-weight: bold; color: #f39c12; margin: min(0.5vh, 0.25rem) 0;">$200K</div>
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary);">Annual savings<br>achieved</div>
+            </div>
+        </div>
+
+        <!-- Implementation Journey -->
+        <div class="content-section" style="margin: 0; flex-shrink: 0;">
+            <div class="section-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem); margin-bottom: min(1vh, 0.75rem);">IMPLEMENTATION JOURNEY</div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: min(1vh, 0.75rem);">
+                <div style="background: var(--bg-tertiary); padding: min(1vh, 0.75rem); border-radius: 6px; text-align: center; border-top: 3px solid var(--accent-primary);">
+                    <div style="font-size: clamp(0.75rem, 1.5vh, 0.95rem); color: var(--accent-primary); font-weight: 600; margin-bottom: min(0.5vh, 0.25rem);">Phase 1</div>
+                    <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary); line-height: 1.3;">Problem identification & system design</div>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: min(1vh, 0.75rem); border-radius: 6px; text-align: center; border-top: 3px solid var(--accent-primary);">
+                    <div style="font-size: clamp(0.75rem, 1.5vh, 0.95rem); color: var(--accent-primary); font-weight: 600; margin-bottom: min(0.5vh, 0.25rem);">Phase 2</div>
+                    <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary); line-height: 1.3;">MVP development & pilot testing</div>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: min(1vh, 0.75rem); border-radius: 6px; text-align: center; border-top: 3px solid var(--accent-primary);">
+                    <div style="font-size: clamp(0.75rem, 1.5vh, 0.95rem); color: var(--accent-primary); font-weight: 600; margin-bottom: min(0.5vh, 0.25rem);">Phase 3</div>
+                    <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary); line-height: 1.3;">Company-wide rollout & training</div>
+                </div>
+                <div style="background: var(--bg-tertiary); padding: min(1vh, 0.75rem); border-radius: 6px; text-align: center; border-top: 3px solid var(--accent-primary);">
+                    <div style="font-size: clamp(0.75rem, 1.5vh, 0.95rem); color: var(--accent-primary); font-weight: 600; margin-bottom: min(0.5vh, 0.25rem);">Phase 4</div>
+                    <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary); line-height: 1.3;">Brigade adoption & scaling</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Relevance to Apex -->
+        <div style="background: linear-gradient(135deg, var(--accent-primary) 0%, #5a8bb7 100%); color: white; padding: min(1.5vh, 1rem) min(2vh, 1.5rem); border-radius: 6px; text-align: center; flex-shrink: 0;">
+            <p style="font-size: clamp(0.85rem, 1.7vh, 1.05rem); line-height: 1.4; margin: 0;">
+                <strong>Direct Application to Apex:</strong> Proven ability to identify system gaps, design solutions, and build production-ready
+                ERP systems from scratch. Ready to apply same methodology to spacecraft component tracking and manufacturing workflows.
+            </p>
         </div>
     </div>
     <div class="slide-footer">

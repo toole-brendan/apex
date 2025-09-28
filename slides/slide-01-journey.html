@@ -1,83 +1,104 @@
 <!-- Slide 1: Background -->
 <div class="slide" id="slide-1" data-slide-number="1">
     <div class="slide-header">
-        <h1 class="slide-title">PROFESSIONAL JOURNEY</h1>
-        <img src="../images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
+        <h1 class="slide-title" style="font-size: clamp(1.25rem, 2.5vh, 1.75rem);">// PROFESSIONAL JOURNEY</h1>
+        <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
     </div>
-    <div class="slide-content">
-        <div class="timeline-horizontal">
+    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: space-evenly; overflow: hidden; padding: 1vh 2vw; gap: min(1.5vh, 1rem);">
+        <style>
+            .timeline-horizontal::before {
+                top: 65px !important;
+            }
+        </style>
+        <div class="timeline-horizontal" style="flex-shrink: 0; margin: 0; position: relative; padding-bottom: 80px;">
             <div class="timeline-node">
                 <div class="timeline-circle">1</div>
-                <div class="timeline-node-content">
-                    <img src="../images/princeton_logo.png" alt="Princeton Logo" class="timeline-logo" onerror="this.style.display='none'">
-                    <div class="timeline-node-year">2015</div>
-                    <div class="timeline-node-title">PRINCETON</div>
-                    <div class="timeline-node-detail">Economics A.B.<br>Quantitative Analysis<br>Academic Excellence</div>
+                <div class="timeline-node-content" style="position: relative;">
+                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2015</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">PRINCETON</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Economics A.B.<br>Quantitative Analysis<br>Academic Excellence</div>
+                    <img src="images/princeton_logo.png" alt="Princeton Logo" style="position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; object-fit: contain;" onerror="this.style.display='none'">
                 </div>
             </div>
 
             <div class="timeline-node">
                 <div class="timeline-circle">2</div>
                 <div class="timeline-node-content">
-                    <div class="timeline-node-year">2016-2018</div>
-                    <div class="timeline-node-title">FINANCE</div>
-                    <div class="timeline-node-detail">Proprietary Trading<br>Derivatives Analysis<br>Client Operations</div>
+                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2016-2018</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">FINANCE</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Proprietary Trading<br>Derivatives Analysis<br>Client Operations</div>
                 </div>
             </div>
 
             <div class="timeline-node">
                 <div class="timeline-circle">3</div>
-                <div class="timeline-node-content">
-                    <img src="../images/101st_airbone.png" alt="101st Airborne Logo" class="timeline-logo" onerror="this.style.display='none'">
-                    <div class="timeline-node-year">2022-2023</div>
-                    <div class="timeline-node-title">101ST AIRBORNE</div>
-                    <div class="timeline-node-detail">Led 42 Soldiers<br>$2.8M Equipment<br>100% Readiness</div>
+                <div class="timeline-node-content" style="position: relative;">
+                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2022-2023</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">101ST AIRBORNE</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Led 42 Soldiers<br>$2.8M Equipment<br>100% Readiness</div>
+                    <img src="images/101st_airbone.png" alt="101st Airborne Logo" style="position: absolute; bottom: -70px; left: 50%; transform: translateX(-50%); width: 72px; height: 72px; object-fit: contain;" onerror="this.style.display='none'">
                 </div>
             </div>
 
             <div class="timeline-node current">
                 <div class="timeline-circle">4</div>
-                <div class="timeline-node-content">
-                    <img src="../images/point72_logo.png" alt="Point72 Logo" class="timeline-logo" onerror="this.style.display='none'">
-                    <div class="timeline-node-year">2024-NOW</div>
-                    <div class="timeline-node-title">POINT72</div>
-                    <div class="timeline-node-detail">Healthcare Analysis<br>AI Integration (40% ↓)<br>8-Figure Impact</div>
+                <div class="timeline-node-content" style="position: relative;">
+                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2024-NOW</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">POINT72</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Healthcare Analysis<br>AI Integration (40% ↓)<br>$35B AUM</div>
+                    <img src="images/point72_logo.png" alt="Point72 Logo" style="position: absolute; bottom: -70px; left: 50%; transform: translateX(-50%); width: 72px; height: 72px; object-fit: contain;" onerror="this.style.display='none'">
                 </div>
             </div>
 
             <div class="timeline-node next">
                 <div class="timeline-circle">→</div>
                 <div class="timeline-node-content">
-                    <div class="timeline-node-year">NEXT STEP</div>
-                    <div class="timeline-node-title">APEX</div>
-                    <div class="timeline-node-detail">Supply Chain<br>Space Manufacturing<br>System Building</div>
+                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">NEXT STEP</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">APEX</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Supply Chain<br>Space Manufacturing<br>System Building</div>
                 </div>
-                <div class="timeline-arrow">➤</div>
+            </div>
+            <div style="position: absolute; right: -20px; top: 65px; transform: translateY(-50%); font-size: 1.5rem; color: var(--accent-primary);">➤</div>
+        </div>
+
+        <div class="content-section" style="margin: 0; flex-shrink: 0;">
+            <div class="section-title" style="font-size: clamp(0.85rem, 2vh, 1rem); margin-bottom: min(1vh, 0.75rem);">KEY ACHIEVEMENTS & EXPERTISE</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: min(2vh, 1rem); margin-top: min(1vh, 0.75rem);">
+                <div>
+                    <h3 style="color: var(--accent-primary); font-size: clamp(0.9rem, 1.8vh, 1.1rem); margin-bottom: min(0.75vh, 0.5rem);">FINANCIAL & ANALYTICAL</h3>
+                    <ul style="list-style: none; padding: 0; font-size: clamp(0.8rem, 1.6vh, 1rem); line-height: 1.4;">
+                        <li>• Research for 16 PMs managing multi-billion dollar portfolios at $35B hedge fund</li>
+                        <li>• Led AI integration reducing analysis time by 40% while enhancing quality</li>
+                        <li>• Managed $500K daily risk positions in proprietary trading</li>
+                        <li>• Resolved complex derivative valuation disputes (TriOptima/NEX)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent-primary); font-size: clamp(0.9rem, 1.8vh, 1.1rem); margin-bottom: min(0.75vh, 0.5rem);">MILITARY & LEADERSHIP</h3>
+                    <ul style="list-style: none; padding: 0; font-size: clamp(0.8rem, 1.6vh, 1rem); line-height: 1.4;">
+                        <li>• Ranger Tab, Expert Infantry Badge, Air Assault qualified</li>
+                        <li>• Led 42-soldier platoon through 5 major field exercises</li>
+                        <li>• 100% equipment accountability ($2.8M) during NATO deployment prep</li>
+                        <li>• Active Secret clearance (U.S. Army Reserve Command)</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="content-section">
-            <div class="section-title">KEY ACHIEVEMENTS & RESPONSIBILITIES</div>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <div class="metric-title">EDUCATION</div>
-                    <div class="metric-value">Princeton</div>
-                    <div class="metric-desc">Economics degree with quantitative focus</div>
+        <div class="content-section" style="margin: 0; flex-shrink: 0;">
+            <div class="section-title" style="font-size: clamp(0.85rem, 2vh, 1rem); margin-bottom: min(1vh, 0.75rem);">TECHNICAL PROJECT HIGHLIGHTS</div>
+            <div style="display: flex; justify-content: space-between; gap: min(1.5vh, 1rem);">
+                <div style="flex: 1; padding: min(1vh, 0.5rem); padding-left: min(1.5vh, 0.75rem); border-left: 2px solid var(--accent-primary);">
+                    <h4 style="color: var(--text-primary); margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.85rem, 1.7vh, 1rem);">HandReceipt</h4>
+                    <p style="font-size: clamp(0.75rem, 1.5vh, 0.9rem); color: var(--text-secondary); line-height: 1.3;">Digital property accountability with cryptographic audit trail</p>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-title">FINANCE</div>
-                    <div class="metric-value">Trading Ops</div>
-                    <div class="metric-desc">Client-facing derivatives & risk analysis</div>
+                <div style="flex: 1; padding: min(1vh, 0.5rem); padding-left: min(1.5vh, 0.75rem); border-left: 2px solid var(--accent-primary);">
+                    <h4 style="color: var(--text-primary); margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.85rem, 1.7vh, 1rem);">PTChampion</h4>
+                    <p style="font-size: clamp(0.75rem, 1.5vh, 0.9rem); color: var(--text-secondary); line-height: 1.3;">AI fitness assessment using computer vision</p>
                 </div>
-                <div class="metric-card">
-                    <div class="metric-title">MILITARY</div>
-                    <div class="metric-value">$2.8M</div>
-                    <div class="metric-desc">Equipment managed with zero losses</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-title">CURRENT</div>
-                    <div class="metric-value">40% ↓</div>
-                    <div class="metric-desc">Analysis time reduction via AI tools</div>
+                <div style="flex: 1; padding: min(1vh, 0.5rem); padding-left: min(1.5vh, 0.75rem); border-left: 2px solid var(--accent-primary);">
+                    <h4 style="color: var(--text-primary); margin-bottom: min(0.5vh, 0.25rem); font-size: clamp(0.85rem, 1.7vh, 1rem);">GridMate</h4>
+                    <p style="font-size: clamp(0.75rem, 1.5vh, 0.9rem); color: var(--text-secondary); line-height: 1.3;">AI Excel assistant reducing modeling time by 70%</p>
                 </div>
             </div>
         </div>
