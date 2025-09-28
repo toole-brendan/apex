@@ -4,126 +4,170 @@
         <h1 class="slide-title" style="font-size: clamp(1.25rem, 2.5vh, 1.75rem);">// WHY APEX — FROM MARKETS TO MAKING</h1>
         <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
     </div>
-    <div class="slide-content" style="display: flex; flex-direction: column; overflow-y: auto; padding: 0.75vh 2vw; gap: clamp(12px, 2vh, 20px);">
+    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: space-evenly; overflow: hidden; padding: 0 2vw 0.5vh 2vw; gap: min(1vh, 0.75rem); position: relative;">
+        <!-- Background Grid Pattern -->
+        <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px), repeating-linear-gradient(90deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px); pointer-events: none;"></div>
 
-        <!-- A. Top Header Block with Manifesto -->
-        <div style="flex-shrink: 0;">
-            <p style="font-size: clamp(1.05rem, 1.6vw, 1.5rem); color: var(--text-primary); font-weight: 600; margin: 0 0 min(0.5vh, 0.25rem) 0; text-align: center;">
+        <!-- Top Header Block with Manifesto -->
+        <div style="flex-shrink: 0; position: relative; z-index: 1;">
+            <p style="font-size: clamp(0.95rem, 1.9vh, 1.2rem); color: var(--text-primary); font-weight: 600; margin: 0 0 min(0.5vh, 0.25rem) 0; text-align: center;">
                 I do my best work when I'm building for a higher mission—especially U.S. national defense.
             </p>
-            <p style="font-size: clamp(0.9rem, 1.2vw, 1.1rem); color: var(--text-secondary); line-height: 1.35; margin: 0; text-align: center;">
-                I bring battle-tested supply chain expertise from military operations,
-                data-driven insights from Wall Street analytics, and hands-on experience building and implementing
-                ERP systems—the exact combination needed to scale Apex's manufacturing operations efficiently.
+            <p style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: var(--text-secondary); line-height: 1.35; margin: 0; text-align: center;">
+                Battle-tested supply chain expertise from military operations + data-driven insights from Wall Street +
+                hands-on ERP implementation = the exact combination needed to scale Apex's manufacturing operations.
             </p>
         </div>
 
-        <!-- B. Contrast Bar - Why Leaving Point72 -->
-        <div style="background: var(--bg-tertiary); border-left: 4px solid var(--accent-primary); padding: min(1vh, 0.75rem); flex-shrink: 0;">
-            <div style="display: flex; gap: min(2vh, 1.5rem); justify-content: space-around; flex-wrap: wrap;">
-                <p style="font-size: clamp(0.9rem, 1.0vw, 1.05rem); color: var(--text-secondary); margin: 0; flex: 1 1 280px; line-height: 1.35;">
-                    • Great role, but it's extracting value via an information edge—not building tangible products.
-                </p>
-                <p style="font-size: clamp(0.9rem, 1.0vw, 1.05rem); color: var(--text-secondary); margin: 0; flex: 1 1 280px; line-height: 1.35;">
-                    • I miss mission, teams, and systems building like we had in the Army.
-                </p>
-                <p style="font-size: clamp(0.9rem, 1.0vw, 1.05rem); color: var(--text-secondary); margin: 0; flex: 1 1 280px; line-height: 1.35;">
-                    • I want to apply supply-chain + ERP skills to real hardware that matters.
-                </p>
+        <!-- Main Two-Column Layout -->
+        <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: min(2vh, 1.25rem); flex-shrink: 0; position: relative; z-index: 1;">
+            <!-- Left: Work Comparison with Tab Interface -->
+            <div style="background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); overflow: hidden;">
+                <!-- Tab Headers -->
+                <div style="display: flex; background: linear-gradient(to right, #f8f9fa, #e9ecef); border-bottom: 2px solid #dee2e6;">
+                    <div style="flex: 1; padding: min(1vh, 0.75rem); background: #616161; color: white; font-weight: 600; font-size: clamp(0.65rem, 1.3vh, 0.8rem); display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
+                        <span style="background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 3px;">NOW</span> POINT72 WORK
+                    </div>
+                    <div style="flex: 1; padding: min(1vh, 0.75rem); background: #4a7ba7; color: white; font-weight: 600; font-size: clamp(0.65rem, 1.3vh, 0.8rem); display: flex; align-items: center; gap: min(0.5vh, 0.25rem); border-left: 1px solid rgba(255,255,255,0.2);">
+                        <span style="background: rgba(255,255,255,0.2); padding: 2px 6px; border-radius: 3px;">FUTURE</span> APEX BUILDING
+                    </div>
+                </div>
+
+                <!-- Content Area -->
+                <div style="padding: min(1.5vh, 1rem);">
+                    <!-- Current Work -->
+                    <div style="background: #f8f9fa; border-radius: 8px; padding: min(1vh, 0.75rem); margin-bottom: min(1vh, 0.75rem); border-left: 4px solid #616161;">
+                        <h4 style="color: #424242; font-size: clamp(0.75rem, 1.5vh, 0.9rem); margin: 0 0 min(0.5vh, 0.25rem); display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
+                            <span style="background: #616161; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.6rem, 1.2vh, 0.75rem);">P</span>
+                            POINT72 HEALTHCARE
+                        </h4>
+                        <ul style="margin: 0; padding-left: min(3vh, 1.5rem); color: #424242;">
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">Healthcare supply chain analysis for 16 PMs</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">KPI tracking and SQL-driven reporting</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">Pre-buy detection and information edge</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">AI tools (40% reduction in analysis time)</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4;">Cost roll-ups and demand optimization</li>
+                        </ul>
+                    </div>
+
+                    <!-- Arrow Transition -->
+                    <div style="text-align: center; margin: min(0.75vh, 0.5rem) 0;">
+                        <div style="width: 2px; height: 20px; background: linear-gradient(to bottom, #616161, #4a7ba7); margin: 0 auto;"></div>
+                        <span style="color: #4a7ba7; font-size: clamp(0.6rem, 1.2vh, 0.75rem);">▼ TRANSLATES TO ▼</span>
+                    </div>
+
+                    <!-- Future Work -->
+                    <div style="background: #f0f7ff; border-radius: 8px; padding: min(1vh, 0.75rem); border-left: 4px solid #4a7ba7;">
+                        <h4 style="color: #2c5282; font-size: clamp(0.75rem, 1.5vh, 0.9rem); margin: 0 0 min(0.5vh, 0.25rem); display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
+                            <span style="background: #4a7ba7; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.6rem, 1.2vh, 0.75rem);">A</span>
+                            APEX SUPPLY CHAIN
+                        </h4>
+                        <ul style="margin: 0; padding-left: min(3vh, 1.5rem); color: #424242;">
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">Supplier yield/lead-time dashboards</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">Manufacturing KPIs and production metrics</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">Component risk sensing/early buy signals</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4; margin-bottom: 2px;">AI for analyst-to-engineer workflows</li>
+                            <li style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.4;">ERP/MRP data hygiene and roll-ups</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Why Change & Proof Points -->
+            <div style="display: flex; flex-direction: column; gap: min(1vh, 0.5rem);">
+                <!-- Why Leaving Card -->
+                <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.5vh, 1rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                    <h4 style="color: #424242; font-size: clamp(0.75rem, 1.5vh, 0.9rem); margin: 0 0 min(0.5vh, 0.25rem);">⚡ WHY I'M LEAVING</h4>
+                    <ul style="margin: 0; padding-left: min(2vh, 1rem); font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #616161; line-height: 1.3;">
+                        <li>Extracting value vs. building products</li>
+                        <li>Miss mission & systems building</li>
+                        <li>Want to apply skills to real hardware</li>
+                    </ul>
+                </div>
+
+                <!-- Three Key Strengths -->
+                <div style="display: flex; flex-direction: column; gap: min(0.5vh, 0.25rem);">
+                    <!-- Mission Fit -->
+                    <div style="background: white; border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7; border-radius: 8px; padding: min(0.75vh, 0.5rem); box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
+                            <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.5rem, 1vh, 0.65rem); font-weight: 700;">1</span>
+                            <strong style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #2c5282;">Mission Fit</strong>
+                        </div>
+                        <p style="margin: min(0.25vh, 2px) 0 0 calc(20px + min(0.5vh, 0.25rem)); font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #616161;">
+                            101st Airborne → National defense → NATO ready
+                        </p>
+                    </div>
+
+                    <!-- Systems Mindset -->
+                    <div style="background: white; border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7; border-radius: 8px; padding: min(0.75vh, 0.5rem); box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
+                            <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.5rem, 1vh, 0.65rem); font-weight: 700;">2</span>
+                            <strong style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #2c5282;">Systems Mindset</strong>
+                        </div>
+                        <p style="margin: min(0.25vh, 2px) 0 0 calc(20px + min(0.5vh, 0.25rem)); font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #616161;">
+                            $10M+ GCSS-Army → Built HandReceipt ERP
+                        </p>
+                    </div>
+
+                    <!-- Build vs Analyze -->
+                    <div style="background: white; border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7; border-radius: 8px; padding: min(0.75vh, 0.5rem); box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
+                            <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.5rem, 1vh, 0.65rem); font-weight: 700;">3</span>
+                            <strong style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #2c5282;">Build vs. Analyze</strong>
+                        </div>
+                        <p style="margin: min(0.25vh, 2px) 0 0 calc(20px + min(0.5vh, 0.25rem)); font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #616161;">
+                            From analyzing → Building → 40% faster via AI
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div style="background: white; border: 1px solid #dee2e6; border-radius: 8px; padding: min(0.75vh, 0.5rem); box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+                    <h4 style="color: var(--text-primary); font-size: clamp(0.65rem, 1.3vh, 0.8rem); margin: 0 0 min(0.5vh, 0.25rem); text-align: center;">KEY METRICS</h4>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: min(0.5vh, 0.25rem);">
+                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; border-radius: 4px; padding: min(0.35vh, 0.25rem) min(0.5vh, 0.35rem);">
+                            <span style="color: #424242; font-size: clamp(0.55rem, 1.1vh, 0.7rem); font-weight: 600;">100% Deploy Ready</span>
+                        </div>
+                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; border-radius: 4px; padding: min(0.35vh, 0.25rem) min(0.5vh, 0.35rem);">
+                            <span style="color: #424242; font-size: clamp(0.55rem, 1.1vh, 0.7rem); font-weight: 600;">40% ↓ Time</span>
+                        </div>
+                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; border-radius: 4px; padding: min(0.35vh, 0.25rem) min(0.5vh, 0.35rem);">
+                            <span style="color: #424242; font-size: clamp(0.55rem, 1.1vh, 0.7rem); font-weight: 600;">$10M+ Managed</span>
+                        </div>
+                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; border-radius: 4px; padding: min(0.35vh, 0.25rem) min(0.5vh, 0.35rem);">
+                            <span style="color: #424242; font-size: clamp(0.55rem, 1.1vh, 0.7rem); font-weight: 600;">16 PMs Served</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- C. Bridge Two-Column Area -->
-        <div style="display: grid; grid-template-columns: minmax(340px, 1fr) minmax(340px, 1fr); gap: min(1.5vh, 1rem); flex-grow: 0; flex-shrink: 0; align-items: start;">
-            <!-- Left: Point72 Work -->
-            <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(12px, 1.6vh, 18px);">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.85rem, 1.2vw, 1.1rem); color: var(--text-primary); margin: 0 0 min(0.75vh, 0.5rem) 0; text-transform: uppercase;">Point72 Work</h4>
-                <ul style="margin: 0; padding-left: min(2vh, 1.25rem); font-size: clamp(0.9rem, 1.0vw, 1.05rem); color: var(--text-secondary); line-height: 1.35;">
-                    <li>Healthcare supply chain analysis for 16 PMs</li>
-                    <li>KPI tracking and SQL-driven reporting</li>
-                    <li>Pre-buy detection and information edge</li>
-                    <li>AI tools (40% reduction in analysis time)</li>
-                    <li>Cost roll-ups and demand optimization</li>
-                </ul>
-            </div>
-
-            <!-- Right: Apex Building Analogue -->
-            <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(12px, 1.6vh, 18px);">
-                <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.85rem, 1.2vw, 1.1rem); color: var(--accent-primary); margin: 0 0 min(0.75vh, 0.5rem) 0; text-transform: uppercase;">→ Apex Building</h4>
-                <ul style="margin: 0; padding-left: min(2vh, 1.25rem); font-size: clamp(0.9rem, 1.0vw, 1.05rem); color: var(--text-secondary); line-height: 1.35;">
-                    <li>Supplier yield/lead-time dashboards</li>
-                    <li>Manufacturing KPIs and production metrics</li>
-                    <li>Component risk sensing/early buy signals</li>
-                    <li>AI for analyst-to-engineer workflows</li>
-                    <li>ERP/MRP data hygiene and roll-ups</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- D. Defense-Tech Moment Band -->
-        <div style="background: linear-gradient(135deg, var(--accent-primary) 0%, #5a8bb7 100%); color: white; padding: min(0.75vh, 0.5rem) min(1.5vh, 1rem); border-radius: 6px; flex-shrink: 0; margin: clamp(8px, 1.2vh, 14px) 0;">
-            <p style="font-size: clamp(0.9rem, 1.1vw, 1.1rem); line-height: 1.35; margin: 0;">
+        <!-- Defense-Tech Moment Band -->
+        <div style="background: linear-gradient(135deg, #1a237e 0%, #283593 100%); color: white; padding: min(0.75vh, 0.5rem) min(1vh, 0.75rem); border-radius: 6px; text-align: center; flex-shrink: 0; position: relative; z-index: 1; box-shadow: 0 4px 16px rgba(26,35,126,0.3);">
+            <p style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); line-height: 1.3; margin: 0;">
                 <strong>I want to spend my career in defense-tech—building space systems, not just analyzing them.</strong>
-                With the U.S. exploring ambitious space-based defense constellations (e.g., the proposed 'Golden Dome') and accelerating missile-warning/tracking layers, the next decade belongs to resilient space manufacturing—exactly where Apex operates.
+                With ambitious space-based defense constellations and accelerating missile-warning layers,
+                the next decade belongs to resilient space manufacturing—exactly where Apex operates.
             </p>
         </div>
 
-        <!-- E. Three Proof Columns -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: min(1.5vh, 1rem); flex-shrink: 0; align-items: start;">
-            <!-- Mission Fit -->
-            <div style="background: rgba(255, 255, 255, 0.5); border-left: 3px solid var(--accent-primary); padding: clamp(12px, 1.4vh, 16px);">
-                <h4 style="font-size: clamp(1rem, 1.1vw, 1.15rem); color: var(--accent-primary); margin: 0 0 min(0.5vh, 0.25rem) 0;">
-                    🎯 Mission Fit
-                </h4>
-                <ul style="margin: 0 0 min(0.5vh, 0.25rem) 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.85rem, 0.95vw, 1rem); color: var(--text-secondary); line-height: 1.35;">
-                    <li>National defense from 101st Airborne</li>
-                    <li>Spacecraft mfg for strategic interests</li>
-                </ul>
-                <span style="background: var(--accent-primary); color: white; padding: 2px 6px; border-radius: 3px; font-size: clamp(0.8rem, 0.9vw, 0.95rem);">NATO ready</span>
+        <!-- Bottom Skills Row -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: min(0.75vh, 0.5rem); flex-shrink: 0; position: relative; z-index: 1;">
+            <div style="background: white; border: 1px solid #dee2e6; border-radius: 8px; padding: min(0.75vh, 0.5rem); text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #2c5282; font-weight: 700;">Military Logistics</div>
+                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">100% readiness</div>
             </div>
-
-            <!-- Systems Mindset -->
-            <div style="background: rgba(255, 255, 255, 0.5); border-left: 3px solid var(--accent-primary); padding: clamp(12px, 1.4vh, 16px);">
-                <h4 style="font-size: clamp(1rem, 1.1vw, 1.15rem); color: var(--accent-primary); margin: 0 0 min(0.5vh, 0.25rem) 0;">
-                    🧩 Systems Mindset
-                </h4>
-                <ul style="margin: 0 0 min(0.5vh, 0.25rem) 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.85rem, 0.95vw, 1rem); color: var(--text-secondary); line-height: 1.35;">
-                    <li>$10M+ via GCSS-Army (SAP)</li>
-                    <li>Built HandReceipt ERP from scratch</li>
-                </ul>
-                <span style="background: var(--accent-primary); color: white; padding: 2px 6px; border-radius: 3px; font-size: clamp(0.8rem, 0.9vw, 0.95rem);">$10M+ managed</span>
+            <div style="background: white; border: 1px solid #dee2e6; border-radius: 8px; padding: min(0.75vh, 0.5rem); text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #2c5282; font-weight: 700;">Financial Analytics</div>
+                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">40% via AI</div>
             </div>
-
-            <!-- Build vs. Analyze -->
-            <div style="background: rgba(255, 255, 255, 0.5); border-left: 3px solid var(--accent-primary); padding: clamp(12px, 1.4vh, 16px);">
-                <h4 style="font-size: clamp(1rem, 1.1vw, 1.15rem); color: var(--accent-primary); margin: 0 0 min(0.5vh, 0.25rem) 0;">
-                    🔧 Build vs. Analyze
-                </h4>
-                <ul style="margin: 0 0 min(0.5vh, 0.25rem) 0; padding-left: min(1.5vh, 1rem); font-size: clamp(0.85rem, 0.95vw, 1rem); color: var(--text-secondary); line-height: 1.35;">
-                    <li>From analyzing to building</li>
-                    <li>Vertical integration alignment</li>
-                </ul>
-                <span style="background: var(--accent-primary); color: white; padding: 2px 6px; border-radius: 3px; font-size: clamp(0.8rem, 0.9vw, 0.95rem);">40% faster via AI</span>
+            <div style="background: white; border: 1px solid #dee2e6; border-radius: 8px; padding: min(0.75vh, 0.5rem); text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #2c5282; font-weight: 700;">System Build</div>
+                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">OCR + audit</div>
             </div>
-        </div>
-
-        <!-- F. Bottom Row - 4 Mini-Cards -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: min(0.75vh, 0.5rem); flex-shrink: 0;">
-            <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(10px, 1.2vh, 14px); text-align: center;">
-                <div style="font-size: clamp(0.85rem, 0.95vw, 1rem); color: var(--accent-primary); font-weight: 600;">Military Logistics</div>
-                <div style="font-size: clamp(0.8rem, 0.9vw, 0.95rem); color: var(--text-secondary); line-height: 1.2;">100% deployment readiness</div>
-            </div>
-            <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(10px, 1.2vh, 14px); text-align: center;">
-                <div style="font-size: clamp(0.85rem, 0.95vw, 1rem); color: var(--accent-primary); font-weight: 600;">Financial Analytics</div>
-                <div style="font-size: clamp(0.8rem, 0.9vw, 0.95rem); color: var(--text-secondary); line-height: 1.2;">40% reduction via AI</div>
-            </div>
-            <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(10px, 1.2vh, 14px); text-align: center;">
-                <div style="font-size: clamp(0.85rem, 0.95vw, 1rem); color: var(--accent-primary); font-weight: 600;">System Implementation</div>
-                <div style="font-size: clamp(0.8rem, 0.9vw, 0.95rem); color: var(--text-secondary); line-height: 1.2;">OCR + audit trails</div>
-            </div>
-            <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(10px, 1.2vh, 14px); text-align: center;">
-                <div style="font-size: clamp(0.85rem, 0.95vw, 1rem); color: var(--accent-primary); font-weight: 600;">Supply Chain Ops</div>
-                <div style="font-size: clamp(0.8rem, 0.9vw, 0.95rem); color: var(--text-secondary); line-height: 1.2;">$10M+ GCSS-Army</div>
+            <div style="background: white; border: 1px solid #dee2e6; border-radius: 8px; padding: min(0.75vh, 0.5rem); text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+                <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #2c5282; font-weight: 700;">Supply Chain</div>
+                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">GCSS-Army</div>
             </div>
         </div>
     </div>

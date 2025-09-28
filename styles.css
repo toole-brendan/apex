@@ -105,7 +105,7 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .slide-content.center-content {
@@ -1188,7 +1188,7 @@ body.printing .navigation {
   /* Content area adjustments for print */
   .slide-content {
     flex: 1 1 auto !important; /* Force content to fill available space */
-    overflow-y: auto !important; /* Allow scrolling if needed */
+    overflow: hidden !important; /* No scrolling - content must fit */
     gap: 1rem !important; /* Reduce gap between elements */
     min-height: 0 !important; /* Allow shrinking if needed */
     padding-bottom: 2rem !important; /* Prevent overlap with footer */

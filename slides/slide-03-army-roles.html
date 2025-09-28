@@ -1,164 +1,180 @@
-<!-- Slide 3: US Army Infantry -->
+<!-- Slide 3: US Army Infantry (fit-to-viewport, no overflow) -->
 <div class="slide" id="slide-3" data-slide-number="3">
-    <div class="slide-header">
-        <h1 class="slide-title" style="font-size: clamp(1.25rem, 2.5vh, 1.75rem);">// US ARMY INFANTRY</h1>
-        <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
-    </div>
-    <div class="slide-content" style="display: flex; flex-direction: column; overflow-y: auto; padding: 0.75vh 2vw; gap: clamp(12px, 2vh, 20px);">
+  <div class="slide-header">
+    <h1 class="slide-title" style="font-size: clamp(1.1rem, 2.2vh, 1.6rem);">// US ARMY INFANTRY</h1>
+    <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
+  </div>
 
-        <!-- Container for float layout -->
-        <div style="width: 100%;">
-            <!-- Floated Image with Info -->
-            <div style="float: left; width: 40%; max-width: 480px; margin: 0 20px 16px 0;">
-                <img src="images/platoon_photo.png" alt="Platoon photo on motor pool line, 2-506 Infantry"
-                     style="width: 100%; height: auto; display: block; border-radius: 8px; background: #000;"
-                     onerror="this.style.outline='2px solid #f66'; this.alt='Image not found';">
+  <!-- CONTENT -->
+  <div class="slide-content"
+       style="
+         display: grid;
+         grid-template-rows: auto 1fr auto;
+         gap: min(1.2vh, 12px);
+         padding: clamp(10px, 1.4vh, 18px) clamp(14px, 2vw, 28px);
+         overflow: hidden;">
 
-                <!-- Caption below image -->
-                <div style="font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); font-style: italic; margin-top: 8px; text-align: center;">
-                    Fort Campbell, KY • Atlantic Resolve • 2020-2021
-                </div>
-            </div>
+    <!-- Row A: Photo + Responsibilities (max ~32vh) -->
+    <section aria-label="hero"
+      style="
+        display: grid;
+        grid-template-columns: minmax(320px, 0.95fr) 1.05fr;
+        gap: clamp(10px, 1.4vh, 16px);
+        align-items: start;
+        min-height: 0;">
+      <!-- Image card (never crops) -->
+      <figure style="
+          margin: 0;
+          background: #000;
+          border-radius: 10px;
+          padding: clamp(6px, 0.6vh, 8px);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          max-height: min(32vh, 360px);">
+        <img src="images/platoon_photo.png"
+             alt="Platoon photo on motor pool line, 2-506 Infantry"
+             style="
+               max-width: 100%;
+               max-height: calc(min(32vh, 360px) - 2.2em);
+               object-fit: contain;
+               display: block;
+               border-radius: 6px;"
+             onerror="this.style.outline='2px solid #f66'; this.alt='Image not found';">
+        <figcaption style="
+            margin-top: 6px;
+            font-size: clamp(0.7rem, 1.2vh, 0.85rem);
+            color: var(--text-secondary);
+            font-style: italic;
+            text-align: center;">
+          Fort Campbell, KY • Atlantic Resolve • 2020–2021
+        </figcaption>
+      </figure>
 
-            <!-- Content that flows around image -->
-            <div style="overflow: hidden;">
-                <!-- Role chips -->
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                    <span style="background: var(--accent-primary); color: white; padding: 6px 12px; border-radius: 4px; font-size: clamp(0.75rem, 0.9vw, 0.95rem);">
-                        Platoon Leader → Company XO
-                    </span>
-                    <span style="background: var(--accent-primary); color: white; padding: 6px 12px; border-radius: 4px; font-size: clamp(0.75rem, 0.9vw, 0.95rem);">
-                        101st Airborne Division
-                    </span>
-                    <span style="background: var(--accent-primary); color: white; padding: 6px 12px; border-radius: 4px; font-size: clamp(0.75rem, 0.9vw, 0.95rem);">
-                        2018-2021
-                    </span>
-                </div>
-
-                <!-- Key Stats -->
-                <div style="margin-bottom: 16px;">
-                    <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.9rem, 1.1vw, 1.1rem); color: var(--accent-primary); margin: 0 0 8px 0; text-transform: uppercase;">
-                        Key Responsibilities
-                    </h3>
-                    <ul style="margin: 0; padding-left: 20px; font-size: clamp(0.75rem, 0.9vw, 0.95rem); color: var(--text-secondary); line-height: 1.4;">
-                        <li>~140 soldiers supported as Company XO</li>
-                        <li>$10M+ equipment accountability via GCSS-Army</li>
-                        <li>100+ daily requisitions processed</li>
-                        <li>95% FMC rate maintained</li>
-                        <li>Zero findings on cyclic inventories</li>
-                        <li>NATO deployment readiness achieved</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Clear float -->
-            <div style="clear: both;"></div>
+      <!-- Chips + bullets (condensed to fit) -->
+      <div style="min-width: 0;">
+        <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom: clamp(6px, 0.8vh, 10px);">
+          <span style="background: var(--accent-primary); color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">Platoon Leader → Company XO</span>
+          <span style="background: var(--accent-primary); color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">101st Airborne Division</span>
+          <span style="background: var(--accent-primary); color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">2018–2021</span>
         </div>
 
-        <!-- Full-Width Role × Supply Chain Output Matrix -->
-        <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(10px, 1.2vh, 14px); flex-shrink: 0;">
-            <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.85rem, 1vw, 1rem); color: var(--accent-primary); margin: 0 0 10px 0; text-transform: uppercase;">Role × Supply Chain Output</h3>
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.85rem, 1.5vh, 1.05rem); color: var(--accent-primary); margin: 0 0 4px 0; text-transform: uppercase;">Key Responsibilities</h3>
+        <ul style="margin:0; padding-left: 16px; font-size: clamp(0.75rem, 1.3vh, 0.95rem); color: var(--text-secondary); line-height: 1.35;">
+          <li>~140 soldiers supported as Company XO</li>
+          <li>$10M+ equipment accountability via GCSS-Army</li>
+          <li>100+ daily requisitions processed</li>
+          <li>95% FMC rate maintained</li>
+          <li>Zero findings on cyclic inventories</li>
+          <li>NATO deployment readiness achieved</li>
+        </ul>
+      </div>
+    </section>
 
-            <!-- Matrix Table -->
-            <div style="display: grid; grid-template-columns: minmax(120px, 0.8fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 1px; background: var(--border-color); border: 1px solid var(--border-color); word-break: break-word;">
-                <!-- Header Row -->
-                <div style="background: var(--bg-tertiary); padding: 8px; font-weight: 600; font-size: clamp(0.7rem, 0.85vw, 0.85rem);"></div>
-                <div style="background: var(--bg-tertiary); padding: 8px; text-align: center; font-weight: 600; color: var(--text-tertiary); font-size: clamp(0.7rem, 0.85vw, 0.85rem);">Systems/ERP</div>
-                <div style="background: var(--bg-tertiary); padding: 8px; text-align: center; font-weight: 600; color: var(--text-tertiary); font-size: clamp(0.7rem, 0.85vw, 0.85rem);">Inventory/Readiness</div>
-                <div style="background: var(--bg-tertiary); padding: 8px; text-align: center; font-weight: 600; color: var(--text-tertiary); font-size: clamp(0.7rem, 0.85vw, 0.85rem);">Movement</div>
+    <!-- Row B: Role × Supply Chain Matrix (compact, height-capped, no scroll) -->
+    <section aria-label="matrix"
+      style="
+        background: var(--bg-card);
+        border: 1px solid rgba(12,20,38,.10);
+        border-radius: 6px;
+        padding: clamp(8px, 1.0vh, 12px);
+        max-height: min(30vh, 320px);
+        display: grid;
+        grid-template-rows: auto 1fr;
+        gap: clamp(6px, 0.8vh, 10px);
+        overflow: hidden;">
+      <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.8rem, 1.4vh, 1rem); color: var(--accent-primary); margin: 0; text-transform: uppercase;">
+        Role × Supply Chain Output
+      </h3>
 
-                <!-- Platoon Leader Row -->
-                <div style="background: white; padding: 10px; font-weight: 600; color: var(--text-primary); font-size: clamp(0.75rem, 0.9vw, 0.9rem);">Platoon Leader</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">Property books<br/>Sub-hand receipts</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">100% SI control<br/>PMCS compliance</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">LOGPAC design<br/>Resupply matrices</div>
+      <div style="
+        display: grid;
+        grid-template-columns: minmax(120px,0.8fr) repeat(3, minmax(0,1fr));
+        gap: 1px;
+        background: var(--border-color);
+        border: 1px solid var(--border-color);
+        font-size: clamp(0.68rem, 1.2vh, 0.9rem);">
+        <!-- headers -->
+        <div style="background: var(--bg-tertiary); padding: 8px; font-weight: 600;"></div>
+        <div style="background: var(--bg-tertiary); padding: 8px; text-align:center; font-weight:600; color: var(--text-tertiary);">Systems/ERP</div>
+        <div style="background: var(--bg-tertiary); padding: 8px; text-align:center; font-weight:600; color: var(--text-tertiary);">Inventory/Readiness</div>
+        <div style="background: var(--bg-tertiary); padding: 8px; text-align:center; font-weight:600; color: var(--text-tertiary);">Movement</div>
 
-                <!-- Company XO Row -->
-                <div style="background: white; padding: 10px; font-weight: 600; color: var(--text-primary); font-size: clamp(0.75rem, 0.9vw, 0.9rem);">Company XO</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">GCSS-Army daily<br/>EDI transactions</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">$10M+ equipment<br/>FMC tracking</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">Deployment ops<br/>Rail/air/sea loads</div>
+        <!-- rows -->
+        <div style="background:#fff; padding:8px; font-weight:600; color:var(--text-primary);">Platoon Leader</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">Property books<br>Sub-hand receipts</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">100% SI control<br>PMCS compliance</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">LOGPAC design<br>Resupply matrices</div>
 
-                <!-- Cross-functional Row -->
-                <div style="background: white; padding: 10px; font-weight: 600; color: var(--text-primary); font-size: clamp(0.75rem, 0.9vw, 0.9rem);">Cross-functional</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">S4 integration<br/>BSB liaison</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">Zero-balance<br/>reconciliation</div>
-                <div style="background: white; padding: 10px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">NATO standards<br/>DLMS compliance</div>
-            </div>
+        <div style="background:#fff; padding:8px; font-weight:600; color:var(--text-primary);">Company XO</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">GCSS-Army daily<br>EDI transactions</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">$10M+ equipment<br>FMC tracking</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">Deployment ops<br>Rail/air/sea loads</div>
+
+        <div style="background:#fff; padding:8px; font-weight:600; color:var(--text-primary);">Cross-functional</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">S4 integration<br>BSB liaison</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">Zero-balance reconciliation</div>
+        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">NATO standards<br>DLMS compliance</div>
+      </div>
+    </section>
+
+    <!-- Row C: Bottom band (snapshot + proof/skills) kept tight -->
+    <section aria-label="bottom"
+      style="
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: clamp(10px, 1.2vh, 14px);
+        align-items: start;
+        min-height: 0;">
+      <div style="background: var(--bg-card); border:1px solid rgba(12,20,38,.10); border-radius:6px; padding: clamp(10px, 1.0vh, 14px);">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.8rem, 1.4vh, 1rem); color: var(--accent-primary); margin:0 0 8px 0; text-transform: uppercase;">Tactical Snapshot</h3>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1vh, 12px); font-size: clamp(0.7rem, 1.2vh, 0.9rem); color: var(--text-secondary);">
+          <div>
+            <h4 style="margin:0 0 4px 0; font-size: inherit; color: var(--text-primary);">What I Owned</h4>
+            <ul style="margin:0; padding-left: 16px; line-height:1.3;">
+              <li>~140 soldiers supported as XO</li>
+              <li>100+ daily requisitions</li>
+              <li>Zero findings on cyclic inventories</li>
+              <li>100% property accountability</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin:0 0 4px 0; font-size: inherit; color: var(--text-primary);">Battle Rhythm</h4>
+            <div>Field: FRAGO → TLPs → OPORD → AAR</div>
+            <div>Garrison: Training, maintenance, inventories</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap: clamp(8px, 1vh, 12px);">
+        <div>
+          <h4 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.72rem, 1.2vh, 0.9rem); color: var(--text-tertiary); margin:0 0 6px 0; text-transform:uppercase;">Proof Points</h4>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">$10M+</span>
+            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">95% FMC</span>
+            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">NATO</span>
+            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">100% SI</span>
+          </div>
         </div>
 
-        <!-- Row 2: Two-Column Layout (60/40) -->
-        <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(12px, 1.6vh, 20px); margin-top: clamp(12px, 1.6vh, 20px);">
-
-            <!-- Left Column (60%): Tactical Snapshot -->
-            <div style="background: var(--bg-card); border: 1px solid rgba(12,20,38,.10); border-radius: 6px; padding: clamp(12px, 1.5vh, 18px);">
-                <h3 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.9rem, 1.1vw, 1.1rem); color: var(--accent-primary); margin: 0 0 12px 0; text-transform: uppercase;">Tactical Snapshot</h3>
-
-                <!-- What I Owned -->
-                <div style="margin-bottom: 12px;">
-                    <h4 style="font-size: clamp(0.75rem, 0.9vw, 0.9rem); color: var(--text-primary); margin: 0 0 6px 0;">What I Owned</h4>
-                    <ul style="margin: 0; padding-left: 16px; font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">
-                        <li>~140 soldiers supported as XO</li>
-                        <li>100+ daily requisitions</li>
-                        <li>Zero findings on cyclic inventories</li>
-                        <li>100% property accountability</li>
-                    </ul>
-                </div>
-
-                <!-- Light Divider -->
-                <div style="border-top: 1px solid var(--border-color); margin: 12px 0;"></div>
-
-                <!-- Battle Rhythm -->
-                <div>
-                    <h4 style="font-size: clamp(0.75rem, 0.9vw, 0.9rem); color: var(--text-primary); margin: 0 0 6px 0;">Battle Rhythm</h4>
-                    <div style="font-size: clamp(0.7rem, 0.85vw, 0.85rem); color: var(--text-secondary); line-height: 1.35;">
-                        <div><strong>Field:</strong> FRAGO → TLPs → OPORD → AAR</div>
-                        <div><strong>Garrison:</strong> Training, maintenance, inventories</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Column (40%): Proof & Skills Stack -->
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-
-                <!-- Metric Rail -->
-                <div>
-                    <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.75rem, 0.9vw, 0.9rem); color: var(--text-tertiary); margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px;">Proof Points</h4>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                        <span style="background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 3px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">$10M+</span>
-                        <span style="background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 3px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">95% FMC</span>
-                        <span style="background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 3px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">NATO</span>
-                        <span style="background: var(--accent-primary); color: white; padding: 3px 8px; border-radius: 3px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">100% SI</span>
-                    </div>
-                </div>
-
-                <!-- Skill Stack -->
-                <div>
-                    <h4 style="font-family: 'IBM Plex Mono', monospace; font-size: clamp(0.75rem, 0.9vw, 0.9rem); color: var(--text-tertiary); margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 1px;">Skills & Tools</h4>
-                    <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">GCSS-Army (SAP)</span>
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">Property Accountability</span>
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">Inventory Control</span>
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">Maintenance Readiness</span>
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">Resupply Design</span>
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">ERP Grounding</span>
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">Compliance & Audits</span>
-                        <span style="background: white; border: 1px solid var(--accent-primary); color: var(--text-primary); padding: 4px 10px; border-radius: 4px; font-size: clamp(0.65rem, 0.8vw, 0.8rem);">Cross-functional Ops</span>
-                    </div>
-                </div>
-
-            </div>
+        <div>
+          <h4 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.72rem, 1.2vh, 0.9rem); color: var(--text-tertiary); margin:0 0 6px 0; text-transform:uppercase;">Skills & Tools</h4>
+          <div style="display:flex; flex-wrap:wrap; gap:6px;">
+            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">GCSS-Army (SAP)</span>
+            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Property Accountability</span>
+            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Inventory Control</span>
+            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Maintenance Readiness</span>
+            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Resupply Design</span>
+            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Compliance & Audits</span>
+          </div>
         </div>
+      </div>
+    </section>
+  </div>
 
-        <!-- Footer Band -->
-        <div style="background: linear-gradient(135deg, var(--accent-primary) 0%, #5a8bb7 100%); color: white; padding: 8px 12px; border-radius: 6px; text-align: center; flex-shrink: 0;">
-            <p style="font-size: clamp(0.75rem, 0.85vw, 0.9rem); line-height: 1.3; margin: 0;">
-                <strong>Direct Relevance to Apex:</strong> This operational foundation—ERP fluency, inventory control, and supply chain management—is why I later built tools to improve ERP workflows and optimize logistics operations.
-            </p>
-        </div>
-    </div>
-    <div class="slide-footer">
-        <span class="footer-left"></span>
-        <span class="footer-right">PAGE 3 OF 10</span>
-    </div>
+  <div class="slide-footer">
+    <span class="footer-left"></span>
+    <span class="footer-right">PAGE 3 OF 10</span>
+  </div>
 </div>
