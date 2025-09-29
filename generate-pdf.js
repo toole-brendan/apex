@@ -143,6 +143,23 @@ async function generatePDF() {
                 .content-section {
                     margin-top: 0 !important;
                 }
+
+                /* Specific fix for Slide 3 - SAP badge spacing */
+                #slide-3 .slide-content > div:nth-child(2) {
+                    margin: 0 0 0.1rem 0 !important; /* minimal bottom gap */
+                    justify-content: center !important;
+                }
+
+                /* Tighten the SAP badge itself */
+                #slide-3 .slide-content > div:nth-child(2) span {
+                    margin: 0 !important;
+                    padding: 1px 3px !important; /* smaller padding inside the badge */
+                }
+
+                /* Also ensure no extra top margin on the grid that follows */
+                #slide-3 .slide-content > div:nth-child(3) {
+                    margin-top: 0 !important;
+                }
             `
         });
 

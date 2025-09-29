@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Print - All Slides Visible</title>
+    <style>
+        /* Make all slides visible for testing */
+        .slide {
+            display: flex !important;
+            width: 11in;
+            height: 8.5in;
+            page-break-after: always;
+            border: 1px solid red;
+            margin-bottom: 1rem;
+        }
+
+        @media print {
+            .slide {
+                border: none;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Print with All Slides</h1>
+    <p>Open dev console and run this in the main presentation:</p>
+    <pre>
+// Force all slides visible for testing
+document.querySelectorAll('.slide').forEach(slide => {
+    slide.style.display = 'flex';
+    slide.style.visibility = 'visible';
+    slide.style.opacity = '1';
+    slide.style.position = 'relative';
+    slide.style.pageBreakAfter = 'always';
+});
+    </pre>
+</body>
+</html>

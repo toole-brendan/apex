@@ -27,9 +27,19 @@
     }
 
     .slide-footer {
-        height: 40px !important;
-        padding: 10px 30px !important;
-        font-size: 11px !important;
+        position: absolute !important;
+        bottom: 0.25in !important;
+        left: 0.25in !important;
+        right: 0.25in !important;
+        margin-top: 0 !important;
+        padding-top: 0.5rem !important;
+        width: auto !important;
+        z-index: 10 !important;
+        background-color: white !important;
+        font-size: 11px !important;  /* Match the base style */
+        height: 40px !important;  /* Fixed height */
+        align-items: center !important;  /* Center vertically */
+        display: flex !important;  /* Ensure flex display */
     }
 
     /* Timeline specific fixes */
@@ -90,7 +100,7 @@
     }
 
     p, li {
-        font-size: 11px !important;
+        font-size: 12px !important;
         line-height: 1.4 !important;
     }
 
@@ -129,7 +139,7 @@
     }
 
     [style*="font-size: clamp(0.7rem"] {
-        font-size: 11px !important;
+        font-size: 12px !important;
     }
 
     [style*="font-size: clamp(0.75rem"] {
@@ -179,13 +189,13 @@
     /* Specific fixes for slide 1 */
     #slide-1 .slide-content {
         padding: 0 30px 4px 30px !important;
-        gap: 4px !important;
+        gap: 2px !important;  /* Reduced from 4px */
         height: calc(100vh - 130px) !important;
         justify-content: flex-start !important;
     }
 
     #slide-1 .timeline-horizontal {
-        margin: 0 !important;
+        margin: 0 0 40px 0 !important;  /* Add bottom margin for separation */
         padding: 15px 0 35px 0 !important;
     }
 
@@ -208,18 +218,29 @@
         color: white !important;
     }
 
-    #slide-1 .content-section {
-        margin-top: 4px !important;
-        margin-bottom: 0 !important;
+    /* More specific selectors to override inline styles */
+    #slide-1 .slide-content > .content-section:first-of-type {
+        margin-top: 0 !important;  /* Timeline margin-bottom handles spacing */
+        margin-bottom: 4px !important;
     }
 
-    #slide-1 .content-section:nth-of-type(2) {
+    #slide-1 .slide-content > .content-section:nth-of-type(2) {
         margin-top: 4px !important;
+        margin-bottom: 4px !important;
+    }
+
+    #slide-1 .slide-content > .content-section {
+        margin-bottom: 4px !important;
+    }
+
+    /* Reduce grid gaps */
+    #slide-1 .content-section div[style*="display: grid"] {
+        gap: 3px !important;  /* Reduced from 4px */
     }
 
     /* Reduce padding in achievement boxes */
     #slide-1 div[style*="border-radius: 10px"] {
-        padding: 6px 8px !important;
+        padding: 5px 7px !important;  /* Slightly tighter */
     }
 
     /* Reduce padding in project boxes */
@@ -227,38 +248,65 @@
         padding: 5px !important;
     }
 
-    /* Smaller fonts for better fit */
+    /* Section titles - even larger for readability */
+    #slide-1 .section-title {
+        font-size: 13px !important;  /* Increased from 12px */
+        margin-bottom: 3px !important;
+        font-weight: 700 !important;
+    }
+
+    /* Match slide-05 font sizes for better readability */
     #slide-1 ul {
         margin: 0 !important;
         padding: 0 !important;
     }
 
     #slide-1 ul li {
-        font-size: 9px !important;
-        line-height: 1.15 !important;
+        font-size: 12px !important;  /* Matches clamp(0.75rem, 1.5vh, 0.95rem) from slide-05 */
+        line-height: 1.4 !important;  /* Match slide-05 line-height */
         margin-bottom: 1px !important;
     }
 
     #slide-1 h3 {
-        font-size: 11px !important;
-        margin-bottom: 3px !important;
+        font-size: 13px !important;
+        margin-bottom: 2px !important;
     }
 
     #slide-1 h4 {
-        font-size: 10px !important;
+        font-size: 12px !important;
         margin-bottom: 2px !important;
     }
 
     #slide-1 p {
-        font-size: 9px !important;
-        line-height: 1.15 !important;
+        font-size: 12px !important;  /* Matches clamp(0.75rem, 1.5vh, 0.95rem) from slide-05 */
+        line-height: 1.4 !important;  /* Match slide-05 line-height */
     }
 
-    /* Fix timeline logo sizes in print */
-    #slide-1 .timeline-node img[alt*="Logo"] {
+    /* Fix timeline logo sizes in print - override inline styles */
+    #slide-1 .timeline-node img[alt*="Logo"][style] {
         bottom: -45px !important;
         width: 50px !important;
         height: 50px !important;
+    }
+
+    /* Specific logo size adjustments - override inline styles */
+    #slide-1 .timeline-node-content img[alt="Princeton Logo"][style] {
+        width: 42px !important;
+        height: 42px !important;
+        bottom: -65px !important;  /* Space between text and logo */
+    }
+
+    /* Keep Princeton text at same vertical level as other timeline events */
+    #slide-1 .timeline-node:first-child .timeline-node-content {
+        min-height: 55px !important;  /* Align text with other timeline events */
+    }
+
+    #slide-1 .timeline-node-content img[alt="Point72 Logo"][style] {
+        width: 80px !important;
+        height: 80px !important;
+        bottom: -60px !important;  /* Lower to align with 101st logos */
+        left: 46% !important;  /* Shifted left from center */
+        transform: translateX(-50%) !important;
     }
 
     /* Center Apex logo vertically in header for all slides */
@@ -274,20 +322,78 @@
         height: auto !important;
     }
 
-    /* Mission/Career boxes on slide 1 */
+    /* Mission/Career boxes on slide 1 - more readable */
     #slide-1 div[style*="MISSION FOCUS"],
     #slide-1 div[style*="CAREER DRIVE"] {
         padding: 4px 5px !important;
-        font-size: 8px !important;
+    }
+
+    /* Make Mission/Career box text match slide-05 size */
+    #slide-1 div[style*="MISSION FOCUS"] div,
+    #slide-1 div[style*="CAREER DRIVE"] div,
+    #slide-1 div[style*="font-size: clamp(0.55rem"] {
+        font-size: 12px !important;  /* Match slide-05 CORE RESPONSIBILITIES body text */
+        line-height: 1.4 !important;
+    }
+
+    /* Reduce spacing above Mission/Career section */
+    #slide-1 > div[style*="display: flex"][style*="gap: 4px"] {
+        margin-top: 2px !important;
+        gap: 3px !important;
+    }
+
+    /* Make icon circles slightly larger to match bigger text */
+    #slide-1 span[style*="border-radius: 50%"] {
+        font-size: 0.65rem !important;
+        min-width: 22px !important;
+        min-height: 22px !important;
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    /* NUCLEAR OVERRIDE: Force ALL font sizes in content-section containers */
+    #slide-1 .content-section * {
+        font-size: inherit !important;
+    }
+
+    /* Set base size for content-section containers */
+    #slide-1 .content-section {
+        font-size: 12px !important;  /* Match slide-05 CORE RESPONSIBILITIES (clamp(0.75rem, 1.5vh, 0.95rem) = 12px in print) */
+    }
+
+    /* Specific overrides for headers in content-section */
+    #slide-1 .content-section h3 {
+        font-size: 13px !important;
+    }
+
+    #slide-1 .content-section h4 {
+        font-size: 12px !important;
+    }
+
+    #slide-1 .content-section .section-title {
+        font-size: 14px !important;
+    }
+
+    /* Force all lists and paragraphs in content-section - overrides inline styles */
+    #slide-1 .content-section ul,
+    #slide-1 .content-section ul li,
+    #slide-1 .content-section p,
+    #slide-1 ul[style*="font-size: 0.7rem"],
+    #slide-1 ul[style*="font-size: 0.7rem"] li,
+    #slide-1 p[style*="font-size: clamp(0.7rem"] {
+        font-size: 12px !important;  /* Match slide-05 CORE RESPONSIBILITIES body text */
+        line-height: 1.4 !important;  /* Match slide-05 line-height */
     }
 
     /* Ensure footer doesn't overlap */
+    /* Remove or comment this out:
     #slide-1 .slide-footer {
         position: absolute !important;
         bottom: 0 !important;
         left: 0 !important;
         right: 0 !important;
     }
+    */
 
     /* Hide overflow */
     * {
@@ -299,246 +405,106 @@
         overflow: hidden !important;
     }
 
-    /* Specific fixes for slide 2 - US Army Infantry */
+    /* Updated slide 2 fixes in styles-print.css */
     #slide-2 .slide-content {
-        grid-template-columns: 0.4fr 0.6fr !important;
-        align-items: center !important; /* Center columns vertically */
-        gap: 0.75rem !important; /* Reduced gap */
-        padding: 0.5rem 1.5rem !important;
-        height: calc(100vh - 100px) !important;
-        max-height: 6.5in !important; /* Absolute constraint for print */
+        grid-template-columns: 55% 45% !important;  /* More space for photo column */
+        gap: 1rem !important;
+        padding: 1.5rem 2.5rem !important;  /* More horizontal padding for centering */
+        align-items: center !important;  /* Center vertically */
+        justify-content: center !important;  /* Center horizontally */
     }
 
-    /* Left column - minimal gap, no justify-content */
-    #slide-2 .slide-content > div:first-child {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 0.25rem !important; /* Small gap between containers */
-        max-height: 100% !important;
-    }
-
-    /* Photo container - only as tall as content */
-    #slide-2 figure {
-        height: auto !important; /* Not 100% - wrap content */
-        display: block !important;
-        overflow: hidden !important;
-        margin: 0 !important;
-        padding: 0.4rem !important;
-    }
-
+    /* Much larger photo */
     #slide-2 figure img {
-        width: 100% !important;
-        height: auto !important; /* Not 100% - natural aspect ratio */
-        max-height: 250px !important; /* Optional constraint */
-        display: block !important;
+        height: 320px !important;  /* Even larger fixed height */
+        max-height: none !important;
+        object-fit: contain !important;
     }
 
-    #slide-2 figcaption {
-        font-size: 9px !important; /* Reduced from 11px */
-        margin-top: 0.3rem !important;
+    /* Polish text sizes for print readability */
+    #slide-2 .slide-title {
+        font-size: 1.2rem !important;
     }
 
-    /* Key Metrics Box - keep it compact, don't let it expand */
-    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] {
-        flex: 0 0 auto !important; /* Don't grow or shrink - just be content height */
-        padding: 0.5rem 0.75rem !important;
-    }
-
-    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] > h4 {
-        font-size: 11px !important;
-        margin: 0 0 0.5rem 0 !important;
-    }
-
-    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] > div {
-        gap: 0.5rem !important; /* Reduce grid gap */
-    }
-
-    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] > div > div {
-        padding: 0.4rem !important; /* Reduce metric box padding */
-    }
-
-    /* Right column - constrain containers */
-    #slide-2 .slide-content > div:last-child {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 0.5rem !important; /* Reduced from 1rem */
-        max-height: 100% !important;
-        overflow: hidden !important;
-    }
-
-    /* Leadership Roles box - compress */
-    #slide-2 div[style*="background: white"][style*="border-radius: 10px"] {
-        padding: 0.75rem !important; /* Reduced from 1.25rem */
-        flex: 0 1 auto !important;
-        min-height: 0 !important;
-    }
-
-    #slide-2 h3 {
-        font-size: 12px !important;
-        margin: 0 0 0.5rem 0 !important; /* Reduced margin */
-    }
-
-    /* Role sections - tighten spacing */
-    #slide-2 div[style*="border-left: 4px solid"] {
-        padding-left: 0.5rem !important;
-        margin-bottom: 0.75rem !important; /* Reduced from 1.25rem */
-    }
-
-    #slide-2 div[style*="border-left: 4px solid"]:last-child {
-        margin-bottom: 0 !important;
-    }
-
-    /* Supply Chain Focus box - only as tall as content */
-    #slide-2 div[style*="background: linear-gradient(135deg, #f8f9fa"] {
-        flex: 0 1 auto !important; /* Changed from flex: 1 - won't stretch */
-        min-height: 0 !important;
-        overflow: hidden !important;
-        padding: 0.75rem !important;
-    }
-
-    /* Reduce all text sizes slightly */
     #slide-2 ul {
-        font-size: 9px !important;
-        line-height: 1.25 !important;
-        margin: 0 !important;
-        padding-left: 1rem !important;
+        font-size: 10px !important;
+        line-height: 1.3 !important;
     }
 
-    #slide-2 ul li {
-        margin-bottom: 1px !important;
-    }
-
-    /* Key Achievement bar - compress */
-    #slide-2 div[style*="background: #fff3cd"] {
-        padding: 0.4rem 0.5rem !important;
-        margin-top: 0.5rem !important;
-    }
-
-    /* Font size overrides for space saving */
-    #slide-2 div[style*="font-size: clamp(1.5rem"] {
-        font-size: 16px !important; /* Down from 20px */
-    }
-
-    #slide-2 div[style*="font-size: clamp(0.65rem"] {
-        font-size: 9px !important; /* Down from 11px */
-    }
-
-    #slide-2 div[style*="font-size: clamp(0.7rem"] {
-        font-size: 10px !important; /* Down from 11px */
-    }
-
-    #slide-2 div[style*="font-size: clamp(0.75rem"] {
-        font-size: 11px !important; /* Down from 12px */
-    }
-
-    #slide-2 div[style*="font-size: clamp(0.8rem"] {
-        font-size: 11px !important; /* Down from 12px */
-    }
-
-    #slide-2 div[style*="font-size: clamp(0.9rem"] {
-        font-size: 12px !important; /* Down from 13px */
-    }
-
-    #slide-2 h4 {
-        font-size: 11px !important;
-        margin: 0 0 0.4rem 0 !important;
-    }
-
-    /* Ensure no overflow on main containers */
-    #slide-2 * {
-        overflow: hidden !important;
-    }
-
-    /* ===== Polish improvements for slide 2 ===== */
-
-    /* Add subtle shadows for depth */
-    #slide-2 figure {
-        box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
-    }
-
-    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] {
-        box-shadow: 0 2px 6px rgba(39,174,96,0.08) !important;
-    }
-
-    #slide-2 div[style*="background: white"][style*="border-radius: 10px"],
-    #slide-2 div[style*="background: linear-gradient(135deg, #f8f9fa"] {
-        box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
-    }
-
-    /* Improve Key Metrics number styling */
-    #slide-2 div[style*="font-size: clamp(1.5rem"] {
-        font-size: 18px !important;
+    /* Ensure smaller metric numbers but still readable */
+    #slide-2 div[style*="font-size: 1rem"] {
+        font-size: 0.95rem !important;
         font-weight: 800 !important;
-        letter-spacing: -0.5px !important;
     }
 
-    /* Make section headers more prominent */
-    #slide-2 h3 {
-        font-size: 13px !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.5px !important;
-        border-bottom: 1px solid #e0e0e0 !important;
-        padding-bottom: 4px !important;
-        margin: 0 0 0.75rem 0 !important;
+    /* Specific fixes for slide 4 - Atlantic Resolve */
+    #slide-4 svg {
+        display: none !important;  /* Hide SVG connectors */
     }
 
-    /* Refine the role headers */
-    #slide-2 div[style*="border-left: 4px solid"] div[style*="font-weight: 700"] {
-        font-size: 11px !important;
-        letter-spacing: 0.3px !important;
+    #slide-4 div[style*="position: absolute"][style*="right: -15px"] {
+        display: none !important;  /* Hide absolute arrow */
     }
 
-    /* Clean up dates styling */
-    #slide-2 div[style*="color: #666"] {
-        font-size: 9px !important;
-        font-style: italic !important;
+    /* Tighten cascading cards - override general border-radius rules */
+    #slide-4 div[style*="border-radius: 12px"][style*="margin-bottom: -10px"] {
+        margin-bottom: 0.25rem !important;  /* Tighter vertical spacing */
+        padding: 0.5rem !important;  /* Tighter internal padding */
     }
 
-    /* Polish the Key Achievement bar */
-    #slide-2 div[style*="background: #fff3cd"] {
-        border-radius: 3px !important;
-        border-left-width: 2px !important;
+    #slide-4 div[style*="background: #f8fafc"][style*="border-radius: 12px"] {
+        margin-left: 5px !important;  /* Card 2 (Actions) tighter */
+        margin-bottom: 0.25rem !important;
+        padding: 0.5rem !important;  /* Tighter internal padding */
     }
 
-    /* Improve list item spacing and bullets */
-    #slide-2 ul li {
-        position: relative !important;
-        padding-left: 0 !important;
+    #slide-4 div[style*="margin-left: 40px"][style*="border-radius: 12px"] {
+        margin-left: 10px !important;  /* Card 3 (Results) tighter */
+        margin-bottom: 0.25rem !important;
+        padding: 0.45rem !important;  /* Even tighter for last card */
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08) !important;  /* Match Card 2 shadow */
     }
 
-    #slide-2 ul li::before {
-        content: "•" !important;
-        position: absolute !important;
-        left: -12px !important;
-        color: #4a7ba7 !important;
-        font-weight: bold !important;
+    /* Tighten padding in Daily RAG Snapshot container */
+    #slide-4 div[style*="Daily RAG Snapshot"] {
+        padding: 0.5rem !important;
     }
 
-    /* Ensure Key Metrics boxes are perfectly aligned */
-    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] > div > div {
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: center !important;
-        align-items: center !important;
-        min-height: 50px !important;
-        border: 1px solid rgba(39,174,96,0.2) !important;
+    #slide-4 table th,
+    #slide-4 table td {
+        padding: 0.25rem !important;
     }
 
-    /* Add subtle gradient to Supply Chain box */
-    #slide-2 div[style*="background: linear-gradient(135deg, #f8f9fa"] {
-        background: linear-gradient(135deg, #fdfdfd, #f8f9fa) !important;
+    /* Specific fixes for slide 6 - P72 AI Initiative */
+    /* Add border to main narrative container to match other containers */
+    #slide-6 section > div:first-child {
+        border: 1px solid #dee2e6 !important;
     }
 
-    /* Ensure consistent border radius */
-    #slide-2 figure,
-    #slide-2 div[style*="border-radius: 8px"],
-    #slide-2 div[style*="border-radius: 10px"] {
-        border-radius: 6px !important;
+    /* Reduce Impact section height to prevent Implementation Architecture overflow */
+    #slide-6 div[style*="linear-gradient(135deg, #059669, #047857)"] {
+        padding: 0.35rem 0.5rem !important;  /* Much tighter vertical padding */
     }
 
-    /* Clean up the grid pattern background opacity */
-    #slide-2 div[style*="background-image: repeating-linear-gradient"] {
-        opacity: 0.4 !important;
+    #slide-6 div[style*="linear-gradient(135deg, #059669, #047857)"] h4 {
+        margin-bottom: 0.2rem !important;  /* Even tighter spacing */
+        font-size: 0.7rem !important;  /* Smaller heading */
+    }
+
+    /* Reduce large metric numbers */
+    #slide-6 div[style*="linear-gradient(135deg, #059669, #047857)"] span[style*="font-size: clamp(1.75rem"] {
+        font-size: 1.1rem !important;  /* Smaller metrics */
+        line-height: 1 !important;
+    }
+
+    /* Reduce metric labels */
+    #slide-6 div[style*="linear-gradient(135deg, #059669, #047857)"] span[style*="font-size: clamp(0.65rem"] {
+        font-size: 0.55rem !important;  /* Smaller labels */
+    }
+
+    /* Reduce metric box padding */
+    #slide-6 div[style*="linear-gradient(135deg, #059669, #047857)"] div[style*="background: rgba(255,255,255,0.1)"] {
+        padding: 0.3rem 0.4rem !important;  /* Much tighter padding */
     }
 
     /* Specific fixes for slide 3 - GCSS-Army */
@@ -549,10 +515,21 @@
         justify-content: flex-start !important;
     }
 
-    /* Target the top context bar directly */
-    #slide-3 .slide-content > div:first-of-type {
-        margin: 0.25rem 0 0.5rem 0 !important;
+    /* Reduce spacing between SAP badge and content on Slide 3 */
+    #slide-3 .slide-content > div:nth-child(2) {
+        margin: 0 0 0.1rem 0 !important; /* override all margins, minimal bottom gap */
         justify-content: center !important;
+    }
+
+    /* Tighten the badge itself */
+    #slide-3 .slide-content > div:nth-child(2) span {
+        margin: 0 !important;
+        padding: 1px 3px !important; /* smaller padding inside the badge */
+    }
+
+    /* Also ensure no extra top margin on the grid that follows */
+    #slide-3 .slide-content > div:nth-child(3) {
+        margin-top: 0 !important;
     }
 
     /* Grid adjustments for better spacing */
@@ -626,9 +603,24 @@
 
     #slide-8 section {
         flex: 0 1 auto !important;
-        max-height: 50% !important;
+        max-height: 58% !important;  /* Increased from 50% to fit all content */
         overflow: hidden !important;
-        padding: 0.75rem !important;
+        padding: 0.75vh 0.85rem !important;  /* Tighter padding */
+    }
+
+    /* Reduce section heading */
+    #slide-8 section h3 {
+        font-size: 0.85rem !important;  /* Smaller heading */
+        margin-bottom: 0.6rem !important;  /* Tighter spacing */
+    }
+
+    /* Reduce spacing in experience/requirements grid */
+    #slide-8 section > div:nth-child(2) {
+        gap: 0.3rem !important;  /* Tighter gap between columns */
+    }
+
+    #slide-8 section > div:nth-child(2) > div > div:nth-child(2) {
+        gap: 0.25rem !important;  /* Tighter gap between items */
     }
 
     /* Reduce all clamp font sizes for print */
@@ -693,16 +685,26 @@
         line-height: 1.25 !important;
     }
 
-    /* Unique value box */
+    /* Unique value box - more compact */
     #slide-8 div[style*="background: #f0f7ff"] {
-        padding: 0.4rem !important;
-        margin-top: 0.3rem !important;
+        padding: 0.3rem 0.4rem !important;  /* Tighter vertical padding */
+        margin-top: 0.25rem !important;  /* Reduced top margin */
+    }
+
+    #slide-8 div[style*="background: #f0f7ff"] div[style*="font-weight: 600"] {
+        font-size: 0.55rem !important;  /* Smaller heading */
+        margin-bottom: 0.15rem !important;  /* Tighter spacing */
     }
 
     #slide-8 div[style*="background: #f0f7ff"] ul {
-        font-size: 0.5rem !important;
-        line-height: 1.2 !important;
-        padding-left: 1rem !important;
+        font-size: 0.48rem !important;  /* Smaller text */
+        line-height: 1.15 !important;  /* Tighter line height */
+        padding-left: 0.9rem !important;
+        margin: 0 !important;
+    }
+
+    #slide-8 div[style*="background: #f0f7ff"] ul li {
+        margin-bottom: 0.1rem !important;  /* Tighter spacing between items */
     }
 
     /* Experience and requirement boxes */
