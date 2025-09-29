@@ -4,11 +4,13 @@
         <h1 class="slide-title" style="font-size: clamp(1.25rem, 2.5vh, 1.75rem);">// HANDRECEIPT — COMPANY-LEVEL ERP</h1>
         <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
     </div>
-    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: flex-start; overflow: hidden; padding: 0.5vh 2vw 1vh 2vw; gap: min(1vh, 0.75rem);">
+    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: flex-start; overflow: hidden; padding: 0.5vh 2vw 1vh 2vw; gap: min(1vh, 0.75rem); position: relative;">
+        <!-- Background Grid Pattern -->
+        <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px), repeating-linear-gradient(90deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px); pointer-events: none;"></div>
 
         <!-- Origin Section -->
-        <section style="border: 1px solid var(--border-color); border-radius: 8px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05); flex-shrink: 0;">
-            <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); text-transform: uppercase; color: var(--text-secondary); margin-bottom: min(0.5vh, 0.25rem);">ORIGIN</div>
+        <section style="border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08); flex-shrink: 0; position: relative; z-index: 1;">
+            <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); text-transform: uppercase; color: #2c5282; margin-bottom: min(0.5vh, 0.25rem); font-family: 'IBM Plex Mono', monospace; font-weight: 600;">Origin</div>
             <p style="margin: 0; font-size: clamp(0.75rem, 1.5vh, 0.95rem); line-height: 1.45;">
                 This was the first product I built while separating from the Army. It came from daily frustration:
                 property accountability at the company level and below was still <em>paper-based</em>, with DA Form 2062s and sub-hand receipts creating blind spots between the company property book and individual soldiers. I set out to digitize that layer.
@@ -16,10 +18,10 @@
         </section>
 
         <!-- Problem → Solution Grid -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: min(1.5vh, 1rem); flex-shrink: 0;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: min(1.5vh, 1rem); flex-shrink: 0; position: relative; z-index: 1;">
             <!-- Problem -->
-            <section style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                <h2 style="margin: 0 0 min(0.75vh, 0.5rem); font-size: clamp(0.9rem, 1.8vh, 1.1rem); color: var(--accent-primary);">The Problem (Company & Below)</h2>
+            <section style="border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                <h2 style="margin: 0 0 min(0.75vh, 0.5rem); font-size: clamp(0.9rem, 1.8vh, 1.1rem); color: #2c5282; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">The Problem (Company & Below)</h2>
                 <ul style="margin: 0; padding-left: min(2vh, 1.25rem); font-size: clamp(0.7rem, 1.4vh, 0.85rem); line-height: 1.5;">
                     <li>Sub-hand receipts tracked on paper (DA 2062) with no reliable digital trail</li>
                     <li>Gaps between GCSS-Army property book and individual responsibility</li>
@@ -28,56 +30,56 @@
             </section>
 
             <!-- What I Built -->
-            <section style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                <h2 style="margin: 0 0 min(0.75vh, 0.5rem); font-size: clamp(0.9rem, 1.8vh, 1.1rem); color: var(--accent-primary);">What I Built</h2>
-                <div style="background: #F7F9FC; border: 1px dashed var(--border-color); border-radius: 8px; padding: min(1vh, 0.75rem); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: clamp(0.65rem, 1.3vh, 0.8rem);">
-                    <div style="color: #22324D; margin-bottom: min(0.5vh, 0.25rem); font-weight: 600;">// Core capabilities</div>
+            <section style="border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.5vh, 1rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                <h2 style="margin: 0 0 min(0.75vh, 0.5rem); font-size: clamp(0.9rem, 1.8vh, 1.1rem); color: #2c5282; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">What I Built</h2>
+                <div style="background: #f8f9fa; border: 1px dashed #dee2e6; border-radius: 6px; padding: min(1vh, 0.75rem); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: clamp(0.65rem, 1.3vh, 0.8rem);">
+                    <div style="color: #2c5282; margin-bottom: min(0.5vh, 0.25rem); font-weight: 600;">// Core capabilities</div>
                     <div>• OCR/LLM digitization of DA Form 2062 (extract items & serials)</div>
                     <div>• Digital twin of each asset with sub-hand-receipt linkage</div>
                     <div>• Immutable audit log using ImmuDB for chain-of-custody</div>
                     <div>• Web + iOS + Android apps for line-level use</div>
                     <div>• QR code item lookup & quick transfer flows</div>
                 </div>
-                <div style="margin-top: min(0.75vh, 0.5rem); font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: var(--text-secondary);">
+                <div style="margin-top: min(0.75vh, 0.5rem); font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #616161;">
                     <strong>Tech:</strong> Go/Gin, PostgreSQL, React, SwiftUI, Kotlin/Compose, ImmuDB, LLM APIs
                 </div>
             </section>
         </div>
 
         <!-- Architecture/Workflow Strip -->
-        <section style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05); flex-shrink: 0;">
-            <div style="font-weight: 600; font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #22324D; margin-bottom: min(0.75vh, 0.5rem);">Workflow (Paper → Digital)</div>
+        <section style="border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08); flex-shrink: 0; position: relative; z-index: 1;">
+            <div style="font-weight: 600; font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #2c5282; margin-bottom: min(0.75vh, 0.5rem); font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">Workflow (Paper → Digital)</div>
             <div style="display: flex; flex-wrap: wrap; gap: min(0.75vh, 0.5rem); align-items: center; font-size: clamp(0.65rem, 1.3vh, 0.8rem);">
-                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">Scan 2062</span>
-                <span style="color: var(--text-secondary);">→</span>
-                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">OCR + LLM Parse</span>
-                <span style="color: var(--text-secondary);">→</span>
-                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">Validate Items/Serials</span>
-                <span style="color: var(--text-secondary);">→</span>
-                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">Create Digital Sub-HR</span>
-                <span style="color: var(--text-secondary);">→</span>
-                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">Ledger Write (ImmuDB)</span>
-                <span style="color: var(--text-secondary);">→</span>
-                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid var(--border-color);">QR Lookup / Transfer</span>
+                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid #dee2e6;">Scan 2062</span>
+                <span style="color: #616161;">→</span>
+                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid #dee2e6;">OCR + LLM Parse</span>
+                <span style="color: #616161;">→</span>
+                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid #dee2e6;">Validate Items/Serials</span>
+                <span style="color: #616161;">→</span>
+                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid #dee2e6;">Create Digital Sub-HR</span>
+                <span style="color: #616161;">→</span>
+                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid #dee2e6;">Ledger Write (ImmuDB)</span>
+                <span style="color: #616161;">→</span>
+                <span style="padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px; background: white; border: 1px solid #dee2e6;">QR Lookup / Transfer</span>
             </div>
-            <ul style="margin: min(1vh, 0.75rem) 0 0; padding-left: min(2vh, 1.25rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: var(--text-secondary);">
+            <ul style="margin: min(1vh, 0.75rem) 0 0; padding-left: min(2vh, 1.25rem); font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #616161;">
                 <li>Human-in-the-loop review on low-confidence parses</li>
                 <li>Every issuance/turn-in writes a signed, append-only record</li>
             </ul>
         </section>
 
         <!-- Status & Lessons / Why It Matters Grid -->
-        <section style="display: grid; grid-template-columns: 1fr 1fr; gap: min(1.5vh, 1rem); flex-shrink: 0;">
-            <div style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                <div style="font-weight: 600; font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #22324D; margin-bottom: min(0.5vh, 0.25rem);">Status & Lessons</div>
+        <section style="display: grid; grid-template-columns: 1fr 1fr; gap: min(1.5vh, 1rem); flex-shrink: 0; position: relative; z-index: 1;">
+            <div style="border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                <div style="font-weight: 600; font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #2c5282; margin-bottom: min(0.5vh, 0.25rem); font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">Status & Lessons</div>
                 <ul style="margin: 0; padding-left: min(2vh, 1.25rem); font-size: clamp(0.7rem, 1.4vh, 0.85rem); line-height: 1.5;">
                     <li>Built post-Army as a practical fix for sub-hand-receipt visibility</li>
                     <li>Focused on accuracy, auditability, and ease for supply sergeants</li>
                     <li>Kept claims conservative: this slide intentionally removes ROI/adoption numbers</li>
                 </ul>
             </div>
-            <div style="border: 1px solid var(--border-color); border-radius: 10px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-                <div style="font-weight: 600; font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #22324D; margin-bottom: min(0.5vh, 0.25rem);">Why It Matters for Apex</div>
+            <div style="border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.25vh, 0.9rem); background: white; box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                <div style="font-weight: 600; font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #2c5282; margin-bottom: min(0.5vh, 0.25rem); font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">Why It Matters for Apex</div>
                 <ul style="margin: 0; padding-left: min(2vh, 1.25rem); font-size: clamp(0.7rem, 1.4vh, 0.85rem); line-height: 1.5;">
                     <li>Pattern: paper→digital ingestion + immutable lineage + quick field UX</li>
                     <li>Direct analog to spacecraft component custody and tool-cradle tracking</li>
@@ -87,7 +89,7 @@
         </section>
 
         <!-- Technical Implementation Details -->
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: min(1vh, 0.75rem); flex-shrink: 0;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: min(1vh, 0.75rem); flex-shrink: 0; position: relative; z-index: 1;">
             <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 1px solid #4caf50; border-radius: 8px; padding: min(1vh, 0.75rem); text-align: center;">
                 <div style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); color: #1b5e20; font-weight: 600; margin-bottom: min(0.25vh, 2px);">Backend</div>
                 <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #2e7d32;">Go/Gin REST API<br/>PostgreSQL + ImmuDB</div>
@@ -103,9 +105,9 @@
         </div>
 
         <!-- Relevance to Apex Footer -->
-        <div style="background: linear-gradient(135deg, var(--accent-primary) 0%, #5a8bb7 100%); color: white; padding: min(1vh, 0.75rem) min(1.5vh, 1rem); border-radius: 8px; text-align: center; flex-shrink: 0;">
+        <div style="background: linear-gradient(135deg, #1a237e 0%, #283593 100%); color: white; padding: min(1vh, 0.75rem) min(1.5vh, 1rem); border-radius: 6px; text-align: center; flex-shrink: 0; position: relative; z-index: 1; box-shadow: 0 4px 16px rgba(26,35,126,0.3);">
             <p style="font-size: clamp(0.75rem, 1.5vh, 0.95rem); line-height: 1.4; margin: 0;">
-                <strong>Direct Application to Apex:</strong> Proven ability to identify system gaps, design solutions, and build production-ready ERP systems from scratch. The same paper→digital ingestion pattern with immutable audit trails applies directly to spacecraft component tracking and manufacturing workflows.
+                <strong>APEX RELEVANCE:</strong> Proven ability to identify system gaps, design solutions, and build production-ready ERP systems from scratch. The same paper→digital ingestion pattern with immutable audit trails applies directly to spacecraft component tracking and manufacturing workflows.
             </p>
         </div>
     </div>
