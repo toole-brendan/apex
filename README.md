@@ -6,6 +6,33 @@
 
 Panel presentation for Apex Space interview showcasing technical expertise in ERP systems, supply chain analytics, and system implementation. Demonstrates proven track record of launching enterprise systems, solving critical supply chain issues, and driving operational efficiency through data-driven solutions.
 
+## Important: PDF Generation Focus
+
+**This codebase is specifically designed for HTML-to-PDF conversion.** The presentation must be submitted as a PDF, so all styling and layout decisions prioritize PDF output quality.
+
+### Design Considerations for PDF
+
+When editing slides, keep in mind:
+- **Avoid viewport units (vh, vw)** in new content - use the print-specific stylesheet (`styles-print.css`) which converts these to fixed pixel values for PDF
+- **Test PDF output after changes** - run `node generate-pdf.js` to ensure your edits render correctly
+- **No scrolling allowed** - all content must fit within a single page/slide
+- **Fixed dimensions matter** - the PDF targets Letter size (8.5" x 11") in landscape orientation
+- **Print styles override** - the print stylesheet takes precedence during PDF generation
+
+### Generating the PDF
+
+```bash
+# Quick method (recommended)
+npm install puppeteer  # Only needed once
+node generate-pdf.js   # Creates apex_presentation.pdf
+
+# Alternative: Browser print
+# Open index.html in browser → Cmd+P → Save as PDF
+# (Print stylesheet will automatically apply)
+```
+
+The `styles-print.css` file ensures consistent spacing and layout in PDF format by converting all responsive units to fixed values.
+
 ## Interview Context
 
 - **Role**: Supply Chain Business Data Analyst

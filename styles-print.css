@@ -1,0 +1,449 @@
+/* Print/PDF-specific styles to fix spacing issues */
+@media print {
+    /* Reset viewport-based units to fixed units for PDF */
+
+    /* Base slide structure */
+    .slide {
+        width: 100% !important;
+        height: 100vh !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        position: relative !important;
+    }
+
+    .slide-header {
+        height: 60px !important;
+        padding: 15px 30px !important;
+    }
+
+    .slide-title {
+        font-size: 24px !important;
+    }
+
+    .slide-content {
+        padding: 10px 30px !important;
+        gap: 8px !important;
+        height: calc(100vh - 120px) !important;
+    }
+
+    .slide-footer {
+        height: 40px !important;
+        padding: 10px 30px !important;
+        font-size: 11px !important;
+    }
+
+    /* Timeline specific fixes */
+    .timeline-horizontal {
+        padding-bottom: 50px !important;
+    }
+
+    .timeline-node-year {
+        font-size: 11px !important;
+    }
+
+    .timeline-node-title {
+        font-size: 13px !important;
+    }
+
+    .timeline-node-detail {
+        font-size: 11px !important;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 13px !important;
+        margin-bottom: 8px !important;
+    }
+
+    /* Content sections */
+    .content-section {
+        margin: 0 !important;
+    }
+
+    /* Cards and containers */
+    div[style*="border-radius: 12px"] {
+        padding: 12px !important;
+        margin-bottom: 8px !important;
+    }
+
+    div[style*="border-radius: 8px"] {
+        padding: 8px !important;
+    }
+
+    /* Typography fixes */
+    h1 {
+        font-size: 24px !important;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    h3 {
+        font-size: 14px !important;
+        margin-bottom: 8px !important;
+    }
+
+    h4 {
+        font-size: 12px !important;
+        margin-bottom: 6px !important;
+    }
+
+    p, li {
+        font-size: 11px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Replace all min() functions with fixed values */
+    [style*="gap: min"] {
+        gap: 8px !important;
+    }
+
+    [style*="padding: min"] {
+        padding: 10px !important;
+    }
+
+    [style*="margin: min"] {
+        margin: 8px !important;
+    }
+
+    [style*="margin-bottom: min"] {
+        margin-bottom: 8px !important;
+    }
+
+    /* Font size replacements for clamp() functions */
+    [style*="font-size: clamp(0.5rem"] {
+        font-size: 9px !important;
+    }
+
+    [style*="font-size: clamp(0.55rem"] {
+        font-size: 10px !important;
+    }
+
+    [style*="font-size: clamp(0.6rem"] {
+        font-size: 10px !important;
+    }
+
+    [style*="font-size: clamp(0.65rem"] {
+        font-size: 11px !important;
+    }
+
+    [style*="font-size: clamp(0.7rem"] {
+        font-size: 11px !important;
+    }
+
+    [style*="font-size: clamp(0.75rem"] {
+        font-size: 12px !important;
+    }
+
+    [style*="font-size: clamp(0.8rem"] {
+        font-size: 12px !important;
+    }
+
+    [style*="font-size: clamp(0.85rem"] {
+        font-size: 13px !important;
+    }
+
+    [style*="font-size: clamp(0.9rem"] {
+        font-size: 13px !important;
+    }
+
+    [style*="font-size: clamp(0.95rem"] {
+        font-size: 14px !important;
+    }
+
+    [style*="font-size: clamp(1rem"] {
+        font-size: 14px !important;
+    }
+
+    [style*="font-size: clamp(1.1rem"] {
+        font-size: 16px !important;
+    }
+
+    [style*="font-size: clamp(1.25rem"] {
+        font-size: 18px !important;
+    }
+
+    [style*="font-size: clamp(1.5rem"] {
+        font-size: 20px !important;
+    }
+
+    [style*="font-size: clamp(1.75rem"] {
+        font-size: 22px !important;
+    }
+
+    [style*="font-size: clamp(2rem"] {
+        font-size: 24px !important;
+    }
+
+    /* Specific fixes for slide 1 */
+    #slide-1 .slide-content {
+        padding: 0 30px 4px 30px !important;
+        gap: 4px !important;
+        height: calc(100vh - 130px) !important;
+        justify-content: flex-start !important;
+    }
+
+    #slide-1 .timeline-horizontal {
+        margin: 0 !important;
+        padding: 15px 0 35px 0 !important;
+    }
+
+    #slide-1 .timeline-horizontal::before {
+        top: 33px !important;  /* Moved down for better alignment in print */
+        z-index: 0 !important;
+    }
+
+    #slide-1 .timeline-circle {
+        position: relative !important;
+        z-index: 2 !important;
+        background: white !important;  /* White background to cover line */
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    /* Keep the last circle (APEX/Next Step) filled */
+    #slide-1 .timeline-node.next .timeline-circle {
+        background: var(--accent-primary) !important;
+        color: white !important;
+    }
+
+    #slide-1 .content-section {
+        margin-top: 4px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #slide-1 .content-section:nth-of-type(2) {
+        margin-top: 4px !important;
+    }
+
+    /* Reduce padding in achievement boxes */
+    #slide-1 div[style*="border-radius: 10px"] {
+        padding: 6px 8px !important;
+    }
+
+    /* Reduce padding in project boxes */
+    #slide-1 div[style*="border-left: 3px solid"] {
+        padding: 5px !important;
+    }
+
+    /* Smaller fonts for better fit */
+    #slide-1 ul {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    #slide-1 ul li {
+        font-size: 9px !important;
+        line-height: 1.15 !important;
+        margin-bottom: 1px !important;
+    }
+
+    #slide-1 h3 {
+        font-size: 11px !important;
+        margin-bottom: 3px !important;
+    }
+
+    #slide-1 h4 {
+        font-size: 10px !important;
+        margin-bottom: 2px !important;
+    }
+
+    #slide-1 p {
+        font-size: 9px !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Fix timeline logo sizes in print */
+    #slide-1 .timeline-node img[alt*="Logo"] {
+        bottom: -45px !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    /* Center Apex logo vertically in header for all slides */
+    .apex-logo-corner {
+        top: 10px !important;  /* Positioned for visual centering in header */
+        width: 110px !important;
+        height: auto !important;
+    }
+
+    /* Ensure Apex logo is not affected on slide 1 specifically */
+    #slide-1 .apex-logo-corner {
+        width: 110px !important;
+        height: auto !important;
+    }
+
+    /* Mission/Career boxes on slide 1 */
+    #slide-1 div[style*="MISSION FOCUS"],
+    #slide-1 div[style*="CAREER DRIVE"] {
+        padding: 4px 5px !important;
+        font-size: 8px !important;
+    }
+
+    /* Ensure footer doesn't overlap */
+    #slide-1 .slide-footer {
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+
+    /* Hide overflow */
+    * {
+        overflow: visible !important;
+    }
+
+    /* Ensure no scrollbars */
+    .slide-content {
+        overflow: hidden !important;
+    }
+
+    /* Specific fixes for slide 2 - US Army Infantry */
+    #slide-2 .slide-content {
+        grid-template-columns: 0.4fr 0.6fr !important;
+        gap: 0.75rem !important; /* Reduced gap */
+        padding: 0.5rem 1.5rem !important;
+        height: calc(100vh - 100px) !important;
+        max-height: 6.5in !important; /* Absolute constraint for print */
+    }
+
+    /* Left column - constrain vertical space */
+    #slide-2 .slide-content > div:first-child {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important; /* Reduced from 1rem */
+        max-height: 100% !important;
+    }
+
+    /* Photo container - keep image same size but constrain container */
+    #slide-2 figure {
+        flex: 0 1 55% !important; /* Prevent expansion */
+        max-height: 50% !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0.4rem !important; /* Reduced padding */
+    }
+
+    #slide-2 figure img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+
+    #slide-2 figcaption {
+        font-size: 9px !important; /* Reduced from 11px */
+        margin-top: 0.3rem !important;
+    }
+
+    /* Key Metrics Box - compress */
+    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] {
+        flex: 0 0 auto !important;
+        padding: 0.5rem 0.75rem !important; /* Reduced padding */
+    }
+
+    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] > h4 {
+        font-size: 11px !important;
+        margin: 0 0 0.5rem 0 !important;
+    }
+
+    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] > div {
+        gap: 0.5rem !important; /* Reduce grid gap */
+    }
+
+    #slide-2 div[style*="background: linear-gradient(135deg, #e8f5e9"] > div > div {
+        padding: 0.4rem !important; /* Reduce metric box padding */
+    }
+
+    /* Right column - constrain containers */
+    #slide-2 .slide-content > div:last-child {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important; /* Reduced from 1rem */
+        max-height: 100% !important;
+        overflow: hidden !important;
+    }
+
+    /* Leadership Roles box - compress */
+    #slide-2 div[style*="background: white"][style*="border-radius: 10px"] {
+        padding: 0.75rem !important; /* Reduced from 1.25rem */
+        flex: 0 1 auto !important;
+        min-height: 0 !important;
+    }
+
+    #slide-2 h3 {
+        font-size: 12px !important;
+        margin: 0 0 0.5rem 0 !important; /* Reduced margin */
+    }
+
+    /* Role sections - tighten spacing */
+    #slide-2 div[style*="border-left: 4px solid"] {
+        padding-left: 0.5rem !important;
+        margin-bottom: 0.75rem !important; /* Reduced from 1.25rem */
+    }
+
+    #slide-2 div[style*="border-left: 4px solid"]:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Supply Chain Focus box - make it fit remaining space */
+    #slide-2 div[style*="background: linear-gradient(135deg, #f8f9fa"] {
+        flex: 1 1 auto !important;
+        min-height: 0 !important; /* Allow shrinking */
+        overflow: hidden !important;
+        padding: 0.75rem !important; /* Reduced padding */
+    }
+
+    /* Reduce all text sizes slightly */
+    #slide-2 ul {
+        font-size: 9px !important;
+        line-height: 1.25 !important;
+        margin: 0 !important;
+        padding-left: 1rem !important;
+    }
+
+    #slide-2 ul li {
+        margin-bottom: 1px !important;
+    }
+
+    /* Key Achievement bar - compress */
+    #slide-2 div[style*="background: #fff3cd"] {
+        padding: 0.4rem 0.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    /* Font size overrides for space saving */
+    #slide-2 div[style*="font-size: clamp(1.5rem"] {
+        font-size: 16px !important; /* Down from 20px */
+    }
+
+    #slide-2 div[style*="font-size: clamp(0.65rem"] {
+        font-size: 9px !important; /* Down from 11px */
+    }
+
+    #slide-2 div[style*="font-size: clamp(0.7rem"] {
+        font-size: 10px !important; /* Down from 11px */
+    }
+
+    #slide-2 div[style*="font-size: clamp(0.75rem"] {
+        font-size: 11px !important; /* Down from 12px */
+    }
+
+    #slide-2 div[style*="font-size: clamp(0.8rem"] {
+        font-size: 11px !important; /* Down from 12px */
+    }
+
+    #slide-2 div[style*="font-size: clamp(0.9rem"] {
+        font-size: 12px !important; /* Down from 13px */
+    }
+
+    #slide-2 h4 {
+        font-size: 11px !important;
+        margin: 0 0 0.4rem 0 !important;
+    }
+
+    /* Ensure no overflow on main containers */
+    #slide-2 * {
+        overflow: hidden !important;
+    }
+}

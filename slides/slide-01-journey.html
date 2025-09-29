@@ -4,46 +4,53 @@
         <h1 class="slide-title" style="font-size: clamp(1.25rem, 2.5vh, 1.75rem);">// PROFESSIONAL JOURNEY</h1>
         <img src="images/apex_logo.png" alt="Apex Logo" class="apex-logo-corner" onerror="this.style.display='none'">
     </div>
-    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: space-evenly; overflow: hidden; padding: 0 2vw 0.5vh 2vw; gap: min(1vh, 0.75rem); position: relative;">
+    <div class="slide-content" style="display: flex; flex-direction: column; justify-content: flex-start; overflow: hidden; padding: 0 30px 4px 30px; gap: 4px; position: relative;">
         <!-- Background Grid Pattern -->
         <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px), repeating-linear-gradient(90deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px); pointer-events: none;"></div>
 
         <style>
-            .timeline-horizontal::before {
-                top: 65px !important;
+            #slide-1 .timeline-horizontal::before {
+                top: 33px !important;  /* Moved down for better alignment */
+                z-index: 0 !important;
+            }
+            #slide-1 .timeline-circle {
+                position: relative;
+                z-index: 2;
+                background: white !important;  /* Ensure white background covers the line */
             }
         </style>
 
-        <div class="timeline-horizontal" style="flex-shrink: 0; margin: 0; position: relative; padding-bottom: 80px; z-index: 1;">
+        <div class="timeline-horizontal" style="flex-shrink: 0; margin: 0; position: relative; padding: 20px 0 40px 0; z-index: 1;">
+            <!-- Timeline nodes with larger logos -->
             <div class="timeline-node">
                 <div class="timeline-circle">1</div>
                 <div class="timeline-node-content" style="position: relative;">
-                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2015</div>
-                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">PRINCETON</div>
-                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Economics A.B.<br>Quantitative Analysis<br>Academic Excellence</div>
-                    <img src="images/princeton_logo.png" alt="Princeton Logo" style="position: absolute; bottom: -60px; left: 50%; transform: translateX(-50%); width: 48px; height: 48px; object-fit: contain;" onerror="this.style.display='none'">
+                    <div class="timeline-node-year" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">2015</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.85rem, 1.7vh, 1rem);">PRINCETON</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.7rem, 1.4vh, 0.85rem);">Economics A.B.<br>Quantitative Analysis<br>Academic Excellence</div>
+                    <img src="../images/princeton_logo.png" alt="Princeton Logo" style="position: absolute; bottom: -50px; left: 50%; transform: translateX(-50%); width: 55px; height: 55px; object-fit: contain;" onerror="this.style.display='none'">
                 </div>
             </div>
 
             <div class="timeline-node">
                 <div class="timeline-circle">2</div>
                 <div class="timeline-node-content">
-                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2016-2018</div>
-                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">FINANCE</div>
-                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Proprietary Trading<br>Derivatives Analysis<br>Client Operations</div>
+                    <div class="timeline-node-year" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">2016-2018</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.85rem, 1.7vh, 1rem);">FINANCE</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.7rem, 1.4vh, 0.85rem);">Proprietary Trading<br>Derivatives Analysis<br>Client Operations</div>
                 </div>
             </div>
 
             <div class="timeline-node">
                 <div class="timeline-circle">3</div>
                 <div class="timeline-node-content" style="position: relative;">
-                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2022-2023</div>
-                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">101ST AIRBORNE</div>
-                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Led 42 Soldiers<br>$2.8M Equipment<br>100% Readiness</div>
-                    <div style="position: absolute; bottom: -70px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; align-items: center;">
-                        <img src="images/rmas.png" alt="RMAS Logo" style="width: 72px; height: 72px; object-fit: contain;" onerror="this.style.display='none'">
-                        <img src="images/ranger.png" alt="Ranger Logo" style="width: 72px; height: 72px; object-fit: contain;" onerror="this.style.display='none'">
-                        <img src="images/101st_airbone.png" alt="101st Airborne Logo" style="width: 72px; height: 72px; object-fit: contain;" onerror="this.style.display='none'">
+                    <div class="timeline-node-year" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">2022-2023</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.85rem, 1.7vh, 1rem);">101ST AIRBORNE</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.7rem, 1.4vh, 0.85rem);">Led 42 Soldiers<br>$2.8M Equipment<br>100% Readiness</div>
+                    <div style="position: absolute; bottom: -50px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; align-items: center;">
+                        <img src="../images/rmas.png" alt="RMAS Logo" style="width: 55px; height: 55px; object-fit: contain;" onerror="this.style.display='none'">
+                        <img src="../images/ranger.png" alt="Ranger Logo" style="width: 55px; height: 55px; object-fit: contain;" onerror="this.style.display='none'">
+                        <img src="../images/101st_airbone.png" alt="101st Airborne Logo" style="width: 55px; height: 55px; object-fit: contain;" onerror="this.style.display='none'">
                     </div>
                 </div>
             </div>
@@ -51,83 +58,102 @@
             <div class="timeline-node current">
                 <div class="timeline-circle">4</div>
                 <div class="timeline-node-content" style="position: relative;">
-                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">2024-NOW</div>
-                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">POINT72</div>
-                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Healthcare Analysis<br>AI Integration (40% ↓)<br>$35B AUM</div>
-                    <img src="images/point72_logo.png" alt="Point72 Logo" style="position: absolute; bottom: -70px; left: 50%; transform: translateX(-50%); width: 72px; height: 72px; object-fit: contain;" onerror="this.style.display='none'">
+                    <div class="timeline-node-year" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">2024-NOW</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.85rem, 1.7vh, 1rem);">POINT72</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.7rem, 1.4vh, 0.85rem);">Healthcare Analysis<br>AI Integration (40% ↓)<br>$35B AUM</div>
+                    <img src="../images/point72_logo.png" alt="Point72 Logo" style="position: absolute; bottom: -50px; left: 50%; transform: translateX(-50%); width: 55px; height: 55px; object-fit: contain;" onerror="this.style.display='none'">
                 </div>
             </div>
 
             <div class="timeline-node next">
-                <div class="timeline-circle">→</div>
+                <div class="timeline-circle" style="background: var(--accent-primary); color: white;">→</div>
                 <div class="timeline-node-content">
-                    <div class="timeline-node-year" style="font-size: clamp(0.8rem, 1.6vh, 1rem);">NEXT STEP</div>
-                    <div class="timeline-node-title" style="font-size: clamp(0.9rem, 1.8vh, 1.1rem);">APEX</div>
-                    <div class="timeline-node-detail" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">Supply Chain<br>Space Manufacturing<br>System Building</div>
+                    <div class="timeline-node-year" style="font-size: clamp(0.75rem, 1.5vh, 0.9rem);">NEXT STEP</div>
+                    <div class="timeline-node-title" style="font-size: clamp(0.85rem, 1.7vh, 1rem);">APEX</div>
+                    <div class="timeline-node-detail" style="font-size: clamp(0.7rem, 1.4vh, 0.85rem);">Supply Chain<br>Space Manufacturing<br>System Building</div>
                 </div>
             </div>
-            <div style="position: absolute; right: -20px; top: 65px; transform: translateY(-50%); font-size: 1.5rem; color: var(--accent-primary);">➤</div>
+            <div style="position: absolute; right: -15px; top: 34px; transform: translateY(-50%); font-size: 1.5rem; color: var(--accent-primary);">➤</div>
         </div>
 
-        <div class="content-section" style="margin: 0; flex-shrink: 0; position: relative; z-index: 1;">
-            <div class="section-title" style="font-size: clamp(0.85rem, 2vh, 1rem); margin-bottom: min(1vh, 0.75rem); color: #2c5282; text-align: center; font-weight: 600;">KEY ACHIEVEMENTS & EXPERTISE</div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: min(2vh, 1rem); margin-top: min(1vh, 0.75rem);">
-                <div style="background: white; border-radius: 12px; padding: min(1.5vh, 1rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid #dee2e6;">
-                    <h3 style="color: #2c5282; font-size: clamp(0.9rem, 1.8vh, 1.1rem); margin-bottom: min(0.75vh, 0.5rem); display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
-                        <span style="background: #4a7ba7; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.6rem, 1.2vh, 0.75rem); font-weight: 700;">F</span>
+        <div class="content-section" style="margin: 4px 0 0 0; flex-shrink: 0; position: relative; z-index: 1;">
+            <div class="section-title" style="font-size: clamp(0.8rem, 1.8vh, 0.95rem); margin-bottom: 4px; color: #2c5282; text-align: center; font-weight: 600;">KEY ACHIEVEMENTS & EXPERTISE</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                <div style="background: white; border-radius: 10px; padding: 6px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #dee2e6;">
+                    <h3 style="color: #2c5282; font-size: clamp(0.85rem, 1.7vh, 1rem); margin-bottom: 4px; display: flex; align-items: center; gap: 3px;">
+                        <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.55rem, 1.1vh, 0.7rem); font-weight: 700;">F</span>
                         FINANCIAL & ANALYTICAL
                     </h3>
-                    <ul style="list-style: none; padding: 0; font-size: clamp(0.8rem, 1.6vh, 1rem); line-height: 1.4; color: #616161;">
-                        <li>• Research for 16 PMs managing multi-billion dollar portfolios at $35B hedge fund</li>
-                        <li>• Led AI integration reducing analysis time by 40% while enhancing quality</li>
-                        <li>• Managed $500K daily risk positions in proprietary trading</li>
-                        <li>• Resolved complex derivative valuation disputes (TriOptima/NEX)</li>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.7rem; line-height: 1.15; color: #616161;">
+                        <li style="margin-bottom: 1px;">• Research for 16 PMs managing multi-billion dollar portfolios</li>
+                        <li style="margin-bottom: 1px;">• Led AI integration reducing analysis time by 40%</li>
+                        <li style="margin-bottom: 1px;">• Managed $500K daily risk positions in proprietary trading</li>
+                        <li>• Resolved complex derivative valuation disputes</li>
                     </ul>
                 </div>
-                <div style="background: white; border-radius: 12px; padding: min(1.5vh, 1rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid #dee2e6;">
-                    <h3 style="color: #2c5282; font-size: clamp(0.9rem, 1.8vh, 1.1rem); margin-bottom: min(0.75vh, 0.5rem); display: flex; align-items: center; gap: min(0.5vh, 0.25rem);">
-                        <span style="background: #4a7ba7; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.6rem, 1.2vh, 0.75rem); font-weight: 700;">M</span>
+                <div style="background: white; border-radius: 10px; padding: 6px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #dee2e6;">
+                    <h3 style="color: #2c5282; font-size: clamp(0.85rem, 1.7vh, 1rem); margin-bottom: 4px; display: flex; align-items: center; gap: 3px;">
+                        <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.55rem, 1.1vh, 0.7rem); font-weight: 700;">M</span>
                         MILITARY & LEADERSHIP
                     </h3>
-                    <ul style="list-style: none; padding: 0; font-size: clamp(0.8rem, 1.6vh, 1rem); line-height: 1.4; color: #616161;">
-                        <li>• Ranger Tab, Expert Infantry Badge, Air Assault qualified</li>
-                        <li>• Led 42-soldier platoon through 5 major field exercises</li>
-                        <li>• 100% equipment accountability ($2.8M) during NATO deployment prep</li>
+                    <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.7rem; line-height: 1.15; color: #616161;">
+                        <li style="margin-bottom: 1px;">• Ranger Tab, Expert Infantry Badge, Air Assault qualified</li>
+                        <li style="margin-bottom: 1px;">• Led 42-soldier platoon through 5 major field exercises</li>
+                        <li style="margin-bottom: 1px;">• 100% equipment accountability during NATO deployment</li>
                         <li>• Active Secret clearance (U.S. Army Reserve Command)</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="content-section" style="margin: 0; flex-shrink: 0; position: relative; z-index: 1;">
-            <div class="section-title" style="font-size: clamp(0.85rem, 2vh, 1rem); margin-bottom: min(1vh, 0.75rem); color: #2c5282; text-align: center; font-weight: 600;">TECHNICAL PROJECT HIGHLIGHTS</div>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: min(1.5vh, 1rem);">
-                <div style="background: white; border-radius: 12px; padding: min(1.5vh, 1rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7;">
-                    <div style="display: flex; align-items: center; gap: min(0.5vh, 0.25rem); margin-bottom: min(0.5vh, 0.25rem);">
-                        <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.5rem, 1vh, 0.65rem); font-weight: 700;">1</span>
-                        <h4 style="color: #2c5282; margin: 0; font-size: clamp(0.85rem, 1.7vh, 1rem);">HandReceipt</h4>
+        <div class="content-section" style="margin: 4px 0 0 0; flex-shrink: 0; position: relative; z-index: 1;">
+            <div class="section-title" style="font-size: clamp(0.8rem, 1.8vh, 0.95rem); margin-bottom: 4px; color: #2c5282; text-align: center; font-weight: 600;">TECHNICAL PROJECT HIGHLIGHTS</div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px;">
+                <div style="background: white; border-radius: 10px; padding: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7;">
+                    <div style="display: flex; align-items: center; gap: 3px; margin-bottom: 3px;">
+                        <span style="background: #4a7ba7; color: white; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.45rem, 0.9vh, 0.6rem); font-weight: 700;">1</span>
+                        <h4 style="color: #2c5282; margin: 0; font-size: clamp(0.8rem, 1.6vh, 0.95rem);">HandReceipt</h4>
                     </div>
-                    <p style="font-size: clamp(0.75rem, 1.5vh, 0.9rem); color: #616161; line-height: 1.3; margin: 0;">Digital property accountability with cryptographic audit trail</p>
+                    <p style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #616161; line-height: 1.2; margin: 0;">Digital property accountability with cryptographic audit trail</p>
                 </div>
-                <div style="background: white; border-radius: 12px; padding: min(1.5vh, 1rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7;">
-                    <div style="display: flex; align-items: center; gap: min(0.5vh, 0.25rem); margin-bottom: min(0.5vh, 0.25rem);">
-                        <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.5rem, 1vh, 0.65rem); font-weight: 700;">2</span>
-                        <h4 style="color: #2c5282; margin: 0; font-size: clamp(0.85rem, 1.7vh, 1rem);">PTChampion</h4>
+                <div style="background: white; border-radius: 10px; padding: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7;">
+                    <div style="display: flex; align-items: center; gap: 3px; margin-bottom: 3px;">
+                        <span style="background: #4a7ba7; color: white; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.45rem, 0.9vh, 0.6rem); font-weight: 700;">2</span>
+                        <h4 style="color: #2c5282; margin: 0; font-size: clamp(0.8rem, 1.6vh, 0.95rem);">PTChampion</h4>
                     </div>
-                    <p style="font-size: clamp(0.75rem, 1.5vh, 0.9rem); color: #616161; line-height: 1.3; margin: 0;">AI fitness assessment using computer vision</p>
+                    <p style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #616161; line-height: 1.2; margin: 0;">AI fitness assessment using computer vision</p>
                 </div>
-                <div style="background: white; border-radius: 12px; padding: min(1.5vh, 1rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08); border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7;">
-                    <div style="display: flex; align-items: center; gap: min(0.5vh, 0.25rem); margin-bottom: min(0.5vh, 0.25rem);">
-                        <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.5rem, 1vh, 0.65rem); font-weight: 700;">3</span>
-                        <h4 style="color: #2c5282; margin: 0; font-size: clamp(0.85rem, 1.7vh, 1rem);">GridMate</h4>
+                <div style="background: white; border-radius: 10px; padding: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7;">
+                    <div style="display: flex; align-items: center; gap: 3px; margin-bottom: 3px;">
+                        <span style="background: #4a7ba7; color: white; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: clamp(0.45rem, 0.9vh, 0.6rem); font-weight: 700;">3</span>
+                        <h4 style="color: #2c5282; margin: 0; font-size: clamp(0.8rem, 1.6vh, 0.95rem);">GridMate</h4>
                     </div>
-                    <p style="font-size: clamp(0.75rem, 1.5vh, 0.9rem); color: #616161; line-height: 1.3; margin: 0;">AI Excel assistant reducing modeling time by 70%</p>
+                    <p style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #616161; line-height: 1.2; margin: 0;">AI Excel assistant reducing modeling time by 70%</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission & Motivation Section -->
+        <div style="display: flex; gap: 4px; margin: 3px 0 0 0; flex-shrink: 0; position: relative; z-index: 1;">
+            <!-- Mission Alignment -->
+            <div style="flex: 1; background: white; border-radius: 6px; padding: 5px 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border: 1px solid #dee2e6; border-left: 3px solid #4a7ba7;">
+                <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #2c5282; font-weight: 600; margin-bottom: 1px;">MISSION FOCUS</div>
+                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161; line-height: 1.15;">
+                    101st Airborne veteran → National defense → Space sector
+                </div>
+            </div>
+
+            <!-- Career Motivation -->
+            <div style="flex: 1; background: white; border-radius: 6px; padding: 5px 6px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); border: 1px solid #dee2e6; border-left: 3px solid #27ae60;">
+                <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #2c5282; font-weight: 600; margin-bottom: 1px;">CAREER DRIVE</div>
+                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161; line-height: 1.15;">
+                    Ready to build systems, not just analyze them
                 </div>
             </div>
         </div>
     </div>
     <div class="slide-footer">
         <span class="footer-left"></span>
-        <span class="footer-right">PAGE 1 OF 10</span>
+        <span class="footer-right">PAGE 1 OF 9</span>
     </div>
 </div>

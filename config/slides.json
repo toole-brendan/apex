@@ -14,76 +14,68 @@
       "file": "slides/slide-01-journey.html",
       "title": "PROFESSIONAL JOURNEY",
       "footerLeft": "BACKGROUND",
-      "footerRight": "PAGE 1 OF 10"
+      "footerRight": "PAGE 1 OF 9"
     },
     {
       "id": "slide-2",
       "number": "02",
-      "file": "slides/slide-02-why-apex.html",
-      "title": "WHY APEX",
-      "footerLeft": "MOTIVATION",
-      "footerRight": "PAGE 2 OF 10"
+      "file": "slides/slide-02-army-roles.html",
+      "title": "US ARMY INFANTRY ROLES",
+      "footerLeft": "MILITARY EXPERIENCE",
+      "footerRight": "PAGE 2 OF 9"
     },
     {
       "id": "slide-3",
       "number": "03",
-      "file": "slides/slide-03-army-roles.html",
-      "title": "US ARMY INFANTRY ROLES",
-      "footerLeft": "MILITARY EXPERIENCE",
-      "footerRight": "PAGE 3 OF 10"
+      "file": "slides/slide-03-gcss-army.html",
+      "title": "GCSS-ARMY ERP SYSTEM",
+      "footerLeft": "PROJECT 1",
+      "footerRight": "PAGE 3 OF 9"
     },
     {
       "id": "slide-4",
       "number": "04",
-      "file": "slides/slide-04-gcss-army.html",
-      "title": "GCSS-ARMY ERP SYSTEM",
-      "footerLeft": "PROJECT 1",
-      "footerRight": "PAGE 4 OF 10"
+      "file": "slides/slide-04-atlantic-resolve.html",
+      "title": "DEPLOYMENT READINESS - ATLANTIC RESOLVE",
+      "footerLeft": "PROJECT 1 - IMPACT",
+      "footerRight": "PAGE 4 OF 9"
     },
     {
       "id": "slide-5",
       "number": "05",
-      "file": "slides/slide-05-atlantic-resolve.html",
-      "title": "DEPLOYMENT READINESS - ATLANTIC RESOLVE",
-      "footerLeft": "PROJECT 1 - IMPACT",
-      "footerRight": "PAGE 5 OF 10"
+      "file": "slides/slide-05-point72.html",
+      "title": "POINT72 SUPPLY CHAIN ANALYST",
+      "footerLeft": "PROJECT 2",
+      "footerRight": "PAGE 5 OF 9"
     },
     {
       "id": "slide-6",
       "number": "06",
-      "file": "slides/slide-06-point72.html",
-      "title": "POINT72 SUPPLY CHAIN ANALYST",
-      "footerLeft": "PROJECT 2",
-      "footerRight": "PAGE 6 OF 10"
+      "file": "slides/slide-06-p72-ai.html",
+      "title": "P72 AI INITIATIVE",
+      "footerLeft": "PROJECT 2 - IMPACT",
+      "footerRight": "PAGE 6 OF 9"
     },
     {
       "id": "slide-7",
       "number": "07",
-      "file": "slides/slide-07-p72-ai.html",
-      "title": "P72 AI INITIATIVE",
-      "footerLeft": "PROJECT 2 - IMPACT",
-      "footerRight": "PAGE 7 OF 10"
+      "file": "slides/slide-07-handreceipt.html",
+      "title": "HANDRECEIPT ERP SYSTEM",
+      "footerLeft": "PROJECT 3",
+      "footerRight": "PAGE 7 OF 9"
     },
     {
       "id": "slide-8",
       "number": "08",
-      "file": "slides/slide-08-handreceipt.html",
-      "title": "HANDRECEIPT ERP SYSTEM",
-      "footerLeft": "PROJECT 3",
-      "footerRight": "PAGE 8 OF 10"
+      "file": "slides/slide-08-ideal-candidate.html",
+      "title": "READY TO CONTRIBUTE",
+      "footerLeft": "VALUE PROPOSITION",
+      "footerRight": "PAGE 8 OF 9"
     },
     {
       "id": "slide-9",
       "number": "09",
-      "file": "slides/slide-09-ideal-candidate.html",
-      "title": "IDEAL CANDIDATE",
-      "footerLeft": "VALUE PROPOSITION",
-      "footerRight": "PAGE 9 OF 10"
-    },
-    {
-      "id": "slide-10",
-      "number": "10",
-      "file": "slides/slide-10-thank-you.html",
+      "file": "slides/slide-09-thank-you.html",
       "title": "THANK YOU",
       "footerLeft": "APEX.SPACE",
       "footerRight": "END OF PRESENTATION"
