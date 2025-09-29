@@ -218,19 +218,13 @@
         color: white !important;
     }
 
-    /* More specific selectors to override inline styles */
-    #slide-1 .slide-content > .content-section:first-of-type {
-        margin-top: 0 !important;  /* Timeline margin-bottom handles spacing */
-        margin-bottom: 4px !important;
+    /* Cleaner content-section spacing - no conflicts */
+    #slide-1 .content-section {
+        margin: 0 0 2px 0 !important;  /* Consistent small bottom margin */
     }
 
-    #slide-1 .slide-content > .content-section:nth-of-type(2) {
-        margin-top: 4px !important;
-        margin-bottom: 4px !important;
-    }
-
-    #slide-1 .slide-content > .content-section {
-        margin-bottom: 4px !important;
+    #slide-1 .content-section:last-of-type {
+        margin-bottom: 0 !important;  /* No margin on last section */
     }
 
     /* Reduce grid gaps */
@@ -250,7 +244,7 @@
 
     /* Section titles - even larger for readability */
     #slide-1 .section-title {
-        font-size: 13px !important;  /* Increased from 12px */
+        font-size: 15px !important;  /* Increased for better visibility */
         margin-bottom: 3px !important;
         font-weight: 700 !important;
     }
@@ -282,6 +276,11 @@
         line-height: 1.4 !important;  /* Match slide-05 line-height */
     }
 
+    /* Force timeline nodes to align from top in print */
+    #slide-1 .timeline-horizontal {
+        align-items: flex-start !important;
+    }
+
     /* Fix timeline logo sizes in print - override inline styles */
     #slide-1 .timeline-node img[alt*="Logo"][style] {
         bottom: -45px !important;
@@ -293,20 +292,25 @@
     #slide-1 .timeline-node-content img[alt="Princeton Logo"][style] {
         width: 42px !important;
         height: 42px !important;
-        bottom: -65px !important;  /* Space between text and logo */
+        bottom: -50px !important;  /* Match other logos vertical alignment */
     }
 
-    /* Keep Princeton text at same vertical level as other timeline events */
-    #slide-1 .timeline-node:first-child .timeline-node-content {
-        min-height: 55px !important;  /* Align text with other timeline events */
+    /* Move ONLY the Princeton logo lower */
+    #slide-1 .timeline-node:first-child img[alt="Princeton Logo"][style] {
+        bottom: -77px !important;  /* Increase from -50px to move it lower */
     }
 
     #slide-1 .timeline-node-content img[alt="Point72 Logo"][style] {
         width: 80px !important;
         height: 80px !important;
-        bottom: -60px !important;  /* Lower to align with 101st logos */
+        bottom: -50px !important;  /* Match other logos vertical alignment */
         left: 46% !important;  /* Shifted left from center */
         transform: translateX(-50%) !important;
+    }
+
+    /* Move ONLY the Point72 logo lower */
+    #slide-1 .timeline-node:nth-child(4) img[alt="Point72 Logo"][style] {
+        bottom: -76px !important;  /* Move it lower to align with other logos */
     }
 
     /* Center Apex logo vertically in header for all slides */
@@ -372,6 +376,13 @@
 
     #slide-1 .content-section .section-title {
         font-size: 14px !important;
+    }
+
+    /* More specific selector to override all others for section titles */
+    #slide-1 .slide-content > .content-section > .section-title {
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        margin-bottom: 6px !important;
     }
 
     /* Force all lists and paragraphs in content-section - overrides inline styles */
