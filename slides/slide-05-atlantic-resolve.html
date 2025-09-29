@@ -32,94 +32,138 @@
 
         <!-- Main Grid -->
         <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: min(1.5vh, 1rem); flex-grow: 1; position: relative; z-index: 1;">
-            <!-- Left: Situation → Action → Results -->
-            <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.5vh, 1rem); box-shadow: 0 8px 32px rgba(0,0,0,0.1); overflow: hidden;">
-                <h2 style="font-size: clamp(0.95rem, 1.9vh, 1.2rem); margin: 0 0 min(1vh, 0.5rem); color: #2c5282; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">Situation → Action → Results</h2>
-
-                <h3 style="font-size: clamp(0.8rem, 1.6vh, 1rem); color: #2c5282; margin: min(1vh, 0.5rem) 0 min(0.5vh, 0.25rem);">Situation</h3>
-                <p style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4; margin: 0 0 min(0.5vh, 0.25rem);">
-                    Short-notice deployment to Europe; BN leadership turnover; no trusted visibility on vehicles/equipment, <strong>AGWASH</strong>, or rail/port timelines; destination shift Romania → Grafenwöhr.
-                </p>
-                <div style="background: #f8f9fa; border-left: 3px solid #4a7ba7; padding: min(0.75vh, 0.5rem); margin-bottom: min(1vh, 0.5rem); border-radius: 6px;">
-                    <p style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3; margin: 0; color: #616161;">
-                        <strong>AGWASH</strong> = Agricultural Wash & inspection required before international shipment; failure → customs holds, re-wash, missed rail.
+            <!-- Left: Cascading Cards with SVG Connectors -->
+            <div style="position: relative; padding-bottom: 40px;">
+                <!-- SVG Connecting Lines -->
+                <svg style="position: absolute; width: 100%; height: 100%; pointer-events: none; z-index: 1; top: 0; left: 0;">
+                    <!-- Line from Situation to Actions -->
+                    <path d="M 150 80 Q 180 100 160 130"
+                          stroke="#4a7ba7" stroke-width="2.5" fill="none"
+                          stroke-dasharray="5,3" opacity="0.4"/>
+                    <!-- Line from Actions to Results -->
+                    <path d="M 180 160 Q 210 180 190 210"
+                          stroke="#4a7ba7" stroke-width="2.5" fill="none"
+                          stroke-dasharray="5,3" opacity="0.4"/>
+                </svg>
+                <!-- Situation Card (Top) -->
+                <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.2vh, 0.85rem); position: relative; z-index: 3; box-shadow: 0 8px 24px rgba(0,0,0,0.12); margin-bottom: -10px;">
+                    <h3 style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #2c5282; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+                        <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700;">1</span>
+                        Situation
+                    </h3>
+                    <p style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.35; margin: 0 0 0.35rem; color: #424242;">
+                        Short-notice deployment to Europe with ~90 days to prepare. BN leadership turnover (4 of 5 new). No trusted visibility on vehicles/equipment status, rail/port timelines. Destination shift Romania → Grafenwöhr mid-planning.
                     </p>
+
+                    <!-- Inline AGWASH alert -->
+                    <div style="background: linear-gradient(90deg, #fef3c7 0%, #fde68a 50%); border-left: 4px solid #f59e0b; padding: 0.4rem 0.5rem; margin-top: 0.4rem; border-radius: 3px;">
+                        <strong style="color: #92400e; font-size: clamp(0.55rem, 1.1vh, 0.7rem);">🚿 AGWASH Critical Path:</strong>
+                        <span style="font-size: clamp(0.55rem, 1.1vh, 0.68rem); color: #78350f;">Agricultural wash & inspection before international shipment. Failure = customs holds, re-wash, missed rail windows.</span>
+                    </div>
                 </div>
 
-                <h3 style="font-size: clamp(0.8rem, 1.6vh, 1rem); color: #2c5282; margin: min(1vh, 0.5rem) 0 min(0.5vh, 0.25rem);">My Role (S-3)</h3>
-                <ul style="margin: 0 0 min(1vh, 0.5rem) min(2vh, 1rem); padding: 0; list-style: none;">
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4; margin-bottom: min(0.25vh, 2px);">• Create the <strong>single source of truth</strong> for readiness & movement</li>
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4; margin-bottom: min(0.25vh, 2px);">• Stand up and run <strong>AGWASH</strong> operations and QC</li>
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4;">• Synchronize <strong>rail load → port → EU arrival</strong> with ITO/SDDC</li>
-                </ul>
+                <!-- Actions Card (Middle) -->
+                <div style="background: #f8fafc; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1.2vh, 0.85rem); margin-left: 20px; position: relative; z-index: 2; box-shadow: 0 6px 20px rgba(0,0,0,0.08); margin-bottom: -10px;">
+                    <h3 style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #2c5282; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+                        <span style="background: #4a7ba7; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700;">2</span>
+                        My Actions (S-3 Operations)
+                    </h3>
 
-                <h3 style="font-size: clamp(0.8rem, 1.6vh, 1rem); color: #2c5282; margin: min(1vh, 0.5rem) 0 min(0.5vh, 0.25rem);">Data Approach</h3>
-                <ul style="margin: 0 0 min(1vh, 0.5rem) min(2vh, 1rem); padding: 0; list-style: none;">
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4; margin-bottom: min(0.25vh, 2px);">• Reconciled <strong>GCSS-Army</strong> (equipment list, work orders, parts-on-order) with motor-pool serial checks</li>
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4;">• Built a daily <strong>RAG dashboard</strong>: FMC/NMC, open WOs, parts ETAs, AGWASH queue/throughput, railcar assignments</li>
-                </ul>
+                    <div style="font-size: clamp(0.55rem, 1.1vh, 0.68rem); line-height: 1.35; color: #616161;">
+                        <div style="margin-bottom: 0.35rem;">
+                            <strong style="color: #4a7ba7;">Single Source of Truth:</strong><br/>
+                            • Reconciled GCSS-Army with motor-pool ground truth<br/>
+                            • Built daily RAG dashboard: FMC/NMC, WOs, parts ETAs<br/>
+                            • Tracked AGWASH queue/throughput, railcar assignments
+                        </div>
+                        <div style="margin-bottom: 0.35rem;">
+                            <strong style="color: #4a7ba7;">AGWASH Operations:</strong><br/>
+                            • Established cell (hours, SOP, QC checklist)<br/>
+                            • Sequenced 180+ vehicles through inspection<br/>
+                            • Coordinated lateral part transfers for red vehicles
+                        </div>
+                        <div>
+                            <strong style="color: #4a7ba7;">Movement Coordination:</strong><br/>
+                            • Built rail load plan with ITO/SDDC sync<br/>
+                            • Re-cut movement when destination changed<br/>
+                            • 15-min daily stand-ups with BN XO/S-3/maintenance
+                        </div>
+                    </div>
+                </div>
 
-                <h3 style="font-size: clamp(0.8rem, 1.6vh, 1rem); color: #2c5282; margin: min(1vh, 0.5rem) 0 min(0.5vh, 0.25rem);">Hands-On Execution</h3>
-                <ul style="margin: 0 0 min(1vh, 0.5rem) min(2vh, 1rem); padding: 0; list-style: none;">
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4; margin-bottom: min(0.25vh, 2px);">• Established the AGWASH cell (hours, SOP, QC checklist) and sequenced companies through the wash</li>
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4; margin-bottom: min(0.25vh, 2px);">• Ran 15-minute daily stand-ups with BN XO/S-3/maintenance; coordinated lateral part transfers for red-flagged vehicles</li>
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4;">• Built the rail load plan; synced with ITO/SDDC; re-cut movement when destination changed—<em>no slip</em></li>
-                </ul>
+                <!-- Results Card (Bottom) -->
+                <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1vh, 0.75rem); margin-left: 40px; position: relative; z-index: 1; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+                    <h3 style="font-size: clamp(0.7rem, 1.4vh, 0.85rem); color: #27ae60; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+                        <span style="background: #27ae60; color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700;">✓</span>
+                        Outcomes
+                    </h3>
 
-                <h3 style="font-size: clamp(0.8rem, 1.6vh, 1rem); color: #2c5282; margin: min(1vh, 0.5rem) 0 min(0.5vh, 0.25rem);">Outcomes</h3>
-                <ul style="margin: 0 0 min(1vh, 0.5rem) min(2vh, 1rem); padding: 0; list-style: none;">
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4; margin-bottom: min(0.25vh, 2px);">• <strong>Zero missed rail windows</strong>; clean agricultural/customs inspections; all serialized items reconciled</li>
-                    <li style="font-size: clamp(0.65rem, 1.3vh, 0.8rem); line-height: 1.4;">• <strong>All vehicles FMC at departure</strong>; tracker + SOP adopted as BN template for follow-on moves</li>
-                </ul>
+                    <div style="font-size: clamp(0.55rem, 1.1vh, 0.68rem); line-height: 1.35;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem; margin-bottom: 0.35rem;">
+                            <span style="color: #166534; background: #f0fdf4; padding: 3px 6px; border-radius: 3px; border-left: 2px solid #27ae60;"><strong>Zero missed rail windows</strong></span>
+                            <span style="color: #166534; background: #f0fdf4; padding: 3px 6px; border-radius: 3px; border-left: 2px solid #27ae60;"><strong>100% FMC at departure</strong></span>
+                            <span style="color: #166534; background: #f0fdf4; padding: 3px 6px; border-radius: 3px; border-left: 2px solid #27ae60;"><strong>Clean AGWASH inspections</strong></span>
+                            <span style="color: #166534; background: #f0fdf4; padding: 3px 6px; border-radius: 3px; border-left: 2px solid #27ae60;"><strong>All items reconciled</strong></span>
+                        </div>
+                        <div style="background: linear-gradient(90deg, #dcfce7 0%, #f0fdf4 100%); padding: 0.35rem; border-radius: 3px; border: 1px solid #bbf7d0;">
+                            <strong style="color: #166534; font-size: clamp(0.55rem, 1.1vh, 0.68rem);">🎆 Impact:</strong>
+                            <span style="color: #15803d; font-size: clamp(0.5rem, 1vh, 0.65rem);">Tracker + SOP adopted as BN template for all follow-on deployments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connecting Arrow -->
+                <div style="position: absolute; top: 25%; right: -15px; width: 30px; height: 2px; background: linear-gradient(to right, #4a7ba7, transparent); z-index: 4;"></div>
             </div>
 
             <!-- Right: Timeline + RAG + Checkpoints -->
             <div style="display: flex; flex-direction: column; gap: min(1vh, 0.5rem); overflow: hidden;">
-                <!-- Movement Timeline -->
-                <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1vh, 0.75rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
-                    <h2 style="font-size: clamp(0.85rem, 1.7vh, 1.05rem); margin: 0 0 min(0.75vh, 0.5rem); color: #2c5282; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">Movement Timeline</h2>
-                    <div style="display: flex; flex-direction: column; gap: min(0.5vh, 0.25rem); position: relative; padding-left: min(2vh, 1rem);">
-                        <div style="position: absolute; left: 6px; top: 12px; bottom: 12px; width: 2px; background: linear-gradient(to bottom, #4a7ba7, #27ae60);"></div>
+                <!-- Top Row: Timeline and Truck Image side by side -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: min(1vh, 0.5rem);">
+                    <!-- Movement Timeline -->
+                    <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1vh, 0.75rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+                        <h2 style="font-size: clamp(0.75rem, 1.5vh, 0.9rem); margin: 0 0 min(0.75vh, 0.5rem); color: #2c5282; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">Movement Timeline</h2>
+                        <div style="position: relative; padding-left: 35px;">
+                            <!-- Vertical Progress Bar -->
+                            <div style="position: absolute; left: 18px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #cbd5e1 0%, #4a7ba7 20%, #4a7ba7 80%, #27ae60 80%, #27ae60 100%); border-radius: 2px;"></div>
 
-                        <div style="display: flex; gap: min(1vh, 0.5rem); align-items: start;">
-                            <div style="position: relative; z-index: 1; background: #4a7ba7; color: white; width: 12px; height: 12px; border-radius: 50%; margin-left: -min(2vh, 1rem); flex-shrink: 0; margin-top: 4px;"></div>
-                            <div style="flex: 1;">
-                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161; margin-bottom: 2px;">D-90</div>
-                                <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3;"><strong>Alert & scoping</strong> — pull GCSS lists; launch ground-truth inventory</div>
+                            <!-- Timeline Nodes - Tighter spacing -->
+                            <div style="position: relative; margin-bottom: 0.9rem;">
+                                <div style="position: absolute; left: -20px; width: 12px; height: 12px; background: #4a7ba7; border: 2px solid white; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
+                                <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); color: #616161; font-weight: 600;">D-90</div>
+                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); line-height: 1.2; color: #424242;"><strong>Alert</strong> - Pull GCSS lists</div>
+                            </div>
+
+                            <div style="position: relative; margin-bottom: 0.9rem;">
+                                <div style="position: absolute; left: -20px; width: 12px; height: 12px; background: #4a7ba7; border: 2px solid white; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
+                                <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); color: #616161; font-weight: 600;">D-70</div>
+                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); line-height: 1.2; color: #424242;"><strong>AGWASH</strong> - SOP created</div>
+                            </div>
+
+                            <div style="position: relative; margin-bottom: 0.9rem;">
+                                <div style="position: absolute; left: -20px; width: 12px; height: 12px; background: #4a7ba7; border: 2px solid white; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
+                                <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); color: #616161; font-weight: 600;">D-45</div>
+                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); line-height: 1.2; color: #424242;"><strong>RAG Live</strong> - Daily stand-ups</div>
+                            </div>
+
+                            <div style="position: relative; margin-bottom: 0.9rem;">
+                                <div style="position: absolute; left: -20px; width: 12px; height: 12px; background: #4a7ba7; border: 2px solid white; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
+                                <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); color: #616161; font-weight: 600;">D-21</div>
+                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); line-height: 1.2; color: #424242;"><strong>Rail Plan</strong> - Load locked</div>
+                            </div>
+
+                            <div style="position: relative;">
+                                <div style="position: absolute; left: -20px; width: 12px; height: 12px; background: #27ae60; border: 2px solid white; border-radius: 50%; box-shadow: 0 2px 4px rgba(0,0,0,0.2);"></div>
+                                <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); color: #616161; font-weight: 600;">D-0</div>
+                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); line-height: 1.2; color: #166534;"><strong>Success</strong> - 100% FMC</div>
                             </div>
                         </div>
+                    </div>
 
-                        <div style="display: flex; gap: min(1vh, 0.5rem); align-items: start;">
-                            <div style="position: relative; z-index: 1; background: #4a7ba7; color: white; width: 12px; height: 12px; border-radius: 50%; margin-left: -min(2vh, 1rem); flex-shrink: 0; margin-top: 4px;"></div>
-                            <div style="flex: 1;">
-                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161; margin-bottom: 2px;">D-70</div>
-                                <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3;"><strong>AGWASH cell</strong> stood up; SOP/QC checklist</div>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: min(1vh, 0.5rem); align-items: start;">
-                            <div style="position: relative; z-index: 1; background: #4a7ba7; color: white; width: 12px; height: 12px; border-radius: 50%; margin-left: -min(2vh, 1rem); flex-shrink: 0; margin-top: 4px;"></div>
-                            <div style="flex: 1;">
-                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161; margin-bottom: 2px;">D-45</div>
-                                <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3;"><strong>RAG dashboard</strong> live; daily stand-ups; lateral transfers</div>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: min(1vh, 0.5rem); align-items: start;">
-                            <div style="position: relative; z-index: 1; background: #4a7ba7; color: white; width: 12px; height: 12px; border-radius: 50%; margin-left: -min(2vh, 1rem); flex-shrink: 0; margin-top: 4px;"></div>
-                            <div style="flex: 1;">
-                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161; margin-bottom: 2px;">D-21</div>
-                                <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3;"><strong>Rail load plan</strong> locked; hazmat/cust. docs verified</div>
-                            </div>
-                        </div>
-
-                        <div style="display: flex; gap: min(1vh, 0.5rem); align-items: start;">
-                            <div style="position: relative; z-index: 1; background: #27ae60; color: white; width: 12px; height: 12px; border-radius: 50%; margin-left: -min(2vh, 1rem); flex-shrink: 0; margin-top: 4px;"></div>
-                            <div style="flex: 1;">
-                                <div style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161; margin-bottom: 2px;">D-0</div>
-                                <div style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); line-height: 1.3;"><strong>Rail on-time</strong>; 100% accountability; equipment departs FMC</div>
-                            </div>
-                        </div>
+                    <!-- HEMTT Truck Image -->
+                    <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1vh, 0.75rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <img src="images/truck.png" alt="HEMTT Military Truck" style="max-width: 100%; height: auto; object-fit: contain; max-height: 80%;">
+                        <p style="font-style: italic; color: #616161; font-size: clamp(0.7rem, 1.4vh, 0.85rem); margin-top: min(0.75vh, 0.5rem); margin-bottom: 0;">HEMTT</p>
                     </div>
                 </div>
 
@@ -169,25 +213,32 @@
                     </table>
                 </div>
 
-                <!-- Execution Checkpoints -->
+                <!-- Execution Checkpoints - Chevron Layout -->
                 <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: min(1vh, 0.75rem); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
                     <h2 style="font-size: clamp(0.85rem, 1.7vh, 1.05rem); margin: 0 0 min(0.75vh, 0.5rem); color: #2c5282; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;">Execution Checkpoints</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: min(0.75vh, 0.5rem);">
-                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px;">
-                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #2c5282;">AGWASH SOP</strong><br/>
-                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">QC checklist • throughput goals • re-wash triggers</span>
+                    <div style="display: flex; gap: 3px; position: relative;">
+                        <!-- Checkpoint 1: AGWASH -->
+                        <div style="flex: 1; position: relative; background: #4a7ba7; color: white; padding: min(0.75vh, 0.5rem) min(1vh, 0.75rem) min(0.75vh, 0.5rem) min(0.75vh, 0.5rem); clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%, 15px 50%); display: flex; flex-direction: column; justify-content: center;">
+                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); padding-left: 8px;">  AGWASH</strong>
+                            <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); margin-top: 2px; opacity: 0.9; padding-left: 8px;">  QC • Throughput</div>
                         </div>
-                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px;">
-                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #2c5282;">Docs</strong><br/>
-                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">Rail load plan • hazmat • customs • cargo lists</span>
+
+                        <!-- Checkpoint 2: Documents -->
+                        <div style="flex: 1; position: relative; background: #4a7ba7; color: white; padding: min(0.75vh, 0.5rem) min(1vh, 0.75rem) min(0.75vh, 0.5rem) min(0.75vh, 0.5rem); margin-left: -12px; clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%, 15px 50%); display: flex; flex-direction: column; justify-content: center;">
+                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); padding-left: 12px;">  DOCS</strong>
+                            <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); margin-top: 2px; opacity: 0.9; padding-left: 12px;">  Rail • Hazmat</div>
                         </div>
-                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px;">
-                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #2c5282;">Readiness</strong><br/>
-                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">FMC/NMC by reason • parts ETAs • lateral transfers</span>
+
+                        <!-- Checkpoint 3: Readiness -->
+                        <div style="flex: 1; position: relative; background: #5e8fb3; color: white; padding: min(0.75vh, 0.5rem) min(1vh, 0.75rem) min(0.75vh, 0.5rem) min(0.75vh, 0.5rem); margin-left: -12px; clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%, 15px 50%); display: flex; flex-direction: column; justify-content: center;">
+                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); padding-left: 12px;">  READY</strong>
+                            <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); margin-top: 2px; opacity: 0.9; padding-left: 12px;">  FMC • Parts</div>
                         </div>
-                        <div style="background: #f0f0f0; border-left: 3px solid #4a7ba7; padding: min(0.5vh, 0.35rem) min(0.75vh, 0.5rem); border-radius: 6px;">
-                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); color: #2c5282;">Comms</strong><br/>
-                            <span style="font-size: clamp(0.55rem, 1.1vh, 0.7rem); color: #616161;">Daily 15-min stand-ups • one tracker • clear owners</span>
+
+                        <!-- Checkpoint 4: Success -->
+                        <div style="flex: 1; position: relative; background: #27ae60; color: white; padding: min(0.75vh, 0.5rem) min(0.75vh, 0.5rem); margin-left: -12px; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 15px 50%); display: flex; flex-direction: column; justify-content: center;">
+                            <strong style="font-size: clamp(0.6rem, 1.2vh, 0.75rem); padding-left: 12px;">  EXECUTE</strong>
+                            <div style="font-size: clamp(0.5rem, 1vh, 0.65rem); margin-top: 2px; opacity: 0.9; padding-left: 12px;">  Daily Stand-ups</div>
                         </div>
                     </div>
                 </div>
