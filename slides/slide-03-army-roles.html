@@ -11,8 +11,12 @@
          display: grid;
          grid-template-rows: auto 1fr auto;
          gap: min(1.2vh, 12px);
-         padding: clamp(10px, 1.4vh, 18px) clamp(14px, 2vw, 28px);
-         overflow: hidden;">
+         padding: 0 2vw 0.5vh 2vw;
+         overflow: hidden;
+         position: relative;">
+
+    <!-- Background Grid Pattern -->
+    <div style="position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px), repeating-linear-gradient(90deg, rgba(74, 123, 167, 0.03) 0px, transparent 1px, transparent 40px, rgba(74, 123, 167, 0.03) 41px); pointer-events: none; z-index: 0;"></div>
 
     <!-- Row A: Photo + Responsibilities (max ~32vh) -->
     <section aria-label="hero"
@@ -21,18 +25,22 @@
         grid-template-columns: minmax(320px, 0.95fr) 1.05fr;
         gap: clamp(10px, 1.4vh, 16px);
         align-items: start;
-        min-height: 0;">
+        min-height: 0;
+        position: relative;
+        z-index: 1;">
       <!-- Image card (never crops) -->
       <figure style="
           margin: 0;
-          background: #000;
-          border-radius: 10px;
-          padding: clamp(6px, 0.6vh, 8px);
+          background: white;
+          border-radius: 12px;
+          padding: clamp(8px, 0.8vh, 10px);
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          max-height: min(32vh, 360px);">
+          max-height: min(32vh, 360px);
+          box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+          border: 1px solid #dee2e6;">
         <img src="images/platoon_photo.png"
              alt="Platoon photo on motor pool line, 2-506 Infantry"
              style="
@@ -45,23 +53,23 @@
         <figcaption style="
             margin-top: 6px;
             font-size: clamp(0.7rem, 1.2vh, 0.85rem);
-            color: var(--text-secondary);
+            color: #616161;
             font-style: italic;
             text-align: center;">
           Fort Campbell, KY • Atlantic Resolve • 2020–2021
         </figcaption>
       </figure>
 
-      <!-- Chips + bullets (condensed to fit) -->
-      <div style="min-width: 0;">
-        <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom: clamp(6px, 0.8vh, 10px);">
-          <span style="background: var(--accent-primary); color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">Platoon Leader → Company XO</span>
-          <span style="background: var(--accent-primary); color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">101st Airborne Division</span>
-          <span style="background: var(--accent-primary); color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">2018–2021</span>
+      <!-- Chips + bullets in container -->
+      <div style="background: white; border: 1px solid #dee2e6; border-radius: 12px; padding: clamp(10px, 1.2vh, 14px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); min-width: 0;">
+        <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom: clamp(8px, 1vh, 12px);">
+          <span style="background: #4a7ba7; color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">Platoon Leader → Company XO</span>
+          <span style="background: #4a7ba7; color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">101st Airborne Division</span>
+          <span style="background: #4a7ba7; color:#fff; padding: 4px 10px; border-radius: 4px; font-size: clamp(0.7rem, 1.3vh, 0.9rem);">2018–2021</span>
         </div>
 
-        <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.85rem, 1.5vh, 1.05rem); color: var(--accent-primary); margin: 0 0 4px 0; text-transform: uppercase;">Key Responsibilities</h3>
-        <ul style="margin:0; padding-left: 16px; font-size: clamp(0.75rem, 1.3vh, 0.95rem); color: var(--text-secondary); line-height: 1.35;">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.85rem, 1.5vh, 1.05rem); color: #2c5282; margin: 0 0 6px 0; text-transform: uppercase;">Key Responsibilities</h3>
+        <ul style="margin:0; padding-left: 18px; font-size: clamp(0.75rem, 1.3vh, 0.95rem); color: #616161; line-height: 1.35;">
           <li>~140 soldiers supported as Company XO</li>
           <li>$10M+ equipment accountability via GCSS-Army</li>
           <li>100+ daily requisitions processed</li>
@@ -75,16 +83,19 @@
     <!-- Row B: Role × Supply Chain Matrix (compact, height-capped, no scroll) -->
     <section aria-label="matrix"
       style="
-        background: var(--bg-card);
-        border: 1px solid rgba(12,20,38,.10);
-        border-radius: 6px;
-        padding: clamp(8px, 1.0vh, 12px);
+        background: white;
+        border: 1px solid #dee2e6;
+        border-radius: 12px;
+        padding: clamp(10px, 1.2vh, 14px);
         max-height: min(30vh, 320px);
         display: grid;
         grid-template-rows: auto 1fr;
         gap: clamp(6px, 0.8vh, 10px);
-        overflow: hidden;">
-      <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.8rem, 1.4vh, 1rem); color: var(--accent-primary); margin: 0; text-transform: uppercase;">
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        position: relative;
+        z-index: 1;">
+      <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.8rem, 1.4vh, 1rem); color: #2c5282; margin: 0; text-transform: uppercase;">
         Role × Supply Chain Output
       </h3>
 
@@ -92,30 +103,32 @@
         display: grid;
         grid-template-columns: minmax(120px,0.8fr) repeat(3, minmax(0,1fr));
         gap: 1px;
-        background: var(--border-color);
-        border: 1px solid var(--border-color);
-        font-size: clamp(0.68rem, 1.2vh, 0.9rem);">
+        background: #dee2e6;
+        border: 1px solid #dee2e6;
+        font-size: clamp(0.68rem, 1.2vh, 0.9rem);
+        border-radius: 6px;
+        overflow: hidden;">
         <!-- headers -->
-        <div style="background: var(--bg-tertiary); padding: 8px; font-weight: 600;"></div>
-        <div style="background: var(--bg-tertiary); padding: 8px; text-align:center; font-weight:600; color: var(--text-tertiary);">Systems/ERP</div>
-        <div style="background: var(--bg-tertiary); padding: 8px; text-align:center; font-weight:600; color: var(--text-tertiary);">Inventory/Readiness</div>
-        <div style="background: var(--bg-tertiary); padding: 8px; text-align:center; font-weight:600; color: var(--text-tertiary);">Movement</div>
+        <div style="background: #f8f9fa; padding: 8px; font-weight: 600;"></div>
+        <div style="background: #f8f9fa; padding: 8px; text-align:center; font-weight:600; color: #2c5282;">Systems/ERP</div>
+        <div style="background: #f8f9fa; padding: 8px; text-align:center; font-weight:600; color: #2c5282;">Inventory/Readiness</div>
+        <div style="background: #f8f9fa; padding: 8px; text-align:center; font-weight:600; color: #2c5282;">Movement</div>
 
         <!-- rows -->
-        <div style="background:#fff; padding:8px; font-weight:600; color:var(--text-primary);">Platoon Leader</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">Property books<br>Sub-hand receipts</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">100% SI control<br>PMCS compliance</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">LOGPAC design<br>Resupply matrices</div>
+        <div style="background:#fff; padding:8px; font-weight:600; color:#2c5282;">Platoon Leader</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">Property books<br>Sub-hand receipts</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">100% SI control<br>PMCS compliance</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">LOGPAC design<br>Resupply matrices</div>
 
-        <div style="background:#fff; padding:8px; font-weight:600; color:var(--text-primary);">Company XO</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">GCSS-Army daily<br>EDI transactions</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">$10M+ equipment<br>FMC tracking</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">Deployment ops<br>Rail/air/sea loads</div>
+        <div style="background:#fff; padding:8px; font-weight:600; color:#2c5282;">Company XO</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">GCSS-Army daily<br>EDI transactions</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">$10M+ equipment<br>FMC tracking</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">Deployment ops<br>Rail/air/sea loads</div>
 
-        <div style="background:#fff; padding:8px; font-weight:600; color:var(--text-primary);">Cross-functional</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">S4 integration<br>BSB liaison</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">Zero-balance reconciliation</div>
-        <div style="background:#fff; padding:8px; color:var(--text-secondary); line-height:1.3;">NATO standards<br>DLMS compliance</div>
+        <div style="background:#fff; padding:8px; font-weight:600; color:#2c5282;">Cross-functional</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">S4 integration<br>BSB liaison</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">Zero-balance reconciliation</div>
+        <div style="background:#fff; padding:8px; color:#616161; line-height:1.3;">NATO standards<br>DLMS compliance</div>
       </div>
     </section>
 
@@ -126,12 +139,14 @@
         grid-template-columns: 1.4fr 1fr;
         gap: clamp(10px, 1.2vh, 14px);
         align-items: start;
-        min-height: 0;">
-      <div style="background: var(--bg-card); border:1px solid rgba(12,20,38,.10); border-radius:6px; padding: clamp(10px, 1.0vh, 14px);">
-        <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.8rem, 1.4vh, 1rem); color: var(--accent-primary); margin:0 0 8px 0; text-transform: uppercase;">Tactical Snapshot</h3>
-        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1vh, 12px); font-size: clamp(0.7rem, 1.2vh, 0.9rem); color: var(--text-secondary);">
+        min-height: 0;
+        position: relative;
+        z-index: 1;">
+      <div style="background: white; border:1px solid #dee2e6; border-radius:12px; padding: clamp(10px, 1.0vh, 14px); box-shadow: 0 4px 16px rgba(0,0,0,0.08);">
+        <h3 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.8rem, 1.4vh, 1rem); color: #2c5282; margin:0 0 8px 0; text-transform: uppercase;">Tactical Snapshot</h3>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1vh, 12px); font-size: clamp(0.7rem, 1.2vh, 0.9rem); color: #616161;">
           <div>
-            <h4 style="margin:0 0 4px 0; font-size: inherit; color: var(--text-primary);">What I Owned</h4>
+            <h4 style="margin:0 0 4px 0; font-size: inherit; color: #2c5282; font-weight: 600;">What I Owned</h4>
             <ul style="margin:0; padding-left: 16px; line-height:1.3;">
               <li>~140 soldiers supported as XO</li>
               <li>100+ daily requisitions</li>
@@ -140,7 +155,7 @@
             </ul>
           </div>
           <div>
-            <h4 style="margin:0 0 4px 0; font-size: inherit; color: var(--text-primary);">Battle Rhythm</h4>
+            <h4 style="margin:0 0 4px 0; font-size: inherit; color: #2c5282; font-weight: 600;">Battle Rhythm</h4>
             <div>Field: FRAGO → TLPs → OPORD → AAR</div>
             <div>Garrison: Training, maintenance, inventories</div>
           </div>
@@ -149,24 +164,24 @@
 
       <div style="display:flex; flex-direction:column; gap: clamp(8px, 1vh, 12px);">
         <div>
-          <h4 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.72rem, 1.2vh, 0.9rem); color: var(--text-tertiary); margin:0 0 6px 0; text-transform:uppercase;">Proof Points</h4>
+          <h4 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.72rem, 1.2vh, 0.9rem); color: #616161; margin:0 0 6px 0; text-transform:uppercase;">Proof Points</h4>
           <div style="display:flex; flex-wrap:wrap; gap:6px;">
-            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">$10M+</span>
-            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">95% FMC</span>
-            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">NATO</span>
-            <span style="background: var(--accent-primary); color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">100% SI</span>
+            <span style="background: #4a7ba7; color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">$10M+</span>
+            <span style="background: #4a7ba7; color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">95% FMC</span>
+            <span style="background: #4a7ba7; color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">NATO</span>
+            <span style="background: #4a7ba7; color:#fff; padding:3px 8px; border-radius:3px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">100% SI</span>
           </div>
         </div>
 
         <div>
-          <h4 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.72rem, 1.2vh, 0.9rem); color: var(--text-tertiary); margin:0 0 6px 0; text-transform:uppercase;">Skills & Tools</h4>
+          <h4 style="font-family:'IBM Plex Mono',monospace; font-size: clamp(0.72rem, 1.2vh, 0.9rem); color: #616161; margin:0 0 6px 0; text-transform:uppercase;">Skills & Tools</h4>
           <div style="display:flex; flex-wrap:wrap; gap:6px;">
-            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">GCSS-Army (SAP)</span>
-            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Property Accountability</span>
-            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Inventory Control</span>
-            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Maintenance Readiness</span>
-            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Resupply Design</span>
-            <span style="background:#fff; border:1px solid var(--accent-primary); color:var(--text-primary); padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Compliance & Audits</span>
+            <span style="background:#fff; border:1px solid #4a7ba7; color:#2c5282; padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">GCSS-Army (SAP)</span>
+            <span style="background:#fff; border:1px solid #4a7ba7; color:#2c5282; padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Property Accountability</span>
+            <span style="background:#fff; border:1px solid #4a7ba7; color:#2c5282; padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Inventory Control</span>
+            <span style="background:#fff; border:1px solid #4a7ba7; color:#2c5282; padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Maintenance Readiness</span>
+            <span style="background:#fff; border:1px solid #4a7ba7; color:#2c5282; padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Resupply Design</span>
+            <span style="background:#fff; border:1px solid #4a7ba7; color:#2c5282; padding:4px 10px; border-radius:4px; font-size: clamp(0.65rem, 1.1vh, 0.85rem);">Compliance & Audits</span>
           </div>
         </div>
       </div>
