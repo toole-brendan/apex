@@ -1,5 +1,23 @@
 /* Print/PDF-specific styles to fix spacing issues */
 @media print {
+    /* Remove box-shadows that render as gray blocks in PDF */
+    * {
+        box-shadow: none !important;
+    }
+
+    /* Keep the subtle grid backgrounds as intended */
+    div[style*="background-image: repeating-linear-gradient"] {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    /* Ensure white containers stay white without shadows */
+    div[style*="background: white"],
+    div[style*="background: #fff"],
+    div[style*="background:#fff"] {
+        background: white !important;
+    }
+
     /* Reset viewport-based units to fixed units for PDF */
 
     /* Base slide structure */
@@ -473,7 +491,6 @@
         margin-left: 10px !important;  /* Card 3 (Results) tighter */
         margin-bottom: 0.25rem !important;
         padding: 0.45rem !important;  /* Even tighter for last card */
-        box-shadow: 0 6px 20px rgba(0,0,0,0.08) !important;  /* Match Card 2 shadow */
     }
 
     /* Tighten padding in Daily RAG Snapshot container */
